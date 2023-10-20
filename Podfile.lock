@@ -1,0 +1,24 @@
+PODS:
+  - R.swift (7.3.2)
+  - SwiftFormat/CLI (0.51.15)
+  - SwiftLint (0.52.4)
+
+DEPENDENCIES:
+  - R.swift (~> 7.3.2)
+  - SwiftFormat/CLI (~> 0.51.10)
+  - SwiftLint (~> 0.52.2)
+
+SPEC REPOS:
+  trunk:
+    - R.swift
+    - SwiftFormat
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  R.swift: 0af0d882f49f03711415cb4e5215daa977d8a480
+  SwiftFormat: 9bb35148209f3e809e920037f9b95c4c889c3612
+  SwiftLint: 1cc5cd61ba9bacb2194e340aeb47a2a37fda00b3
+
+PODFILE CHECKSUM: aff332dc326cd439abd605a3d4856e062943de98
+
+COCOAPODS: 1.12.1
