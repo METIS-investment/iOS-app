@@ -17,8 +17,8 @@ extension UIViewController {
                 height: 30
             )
         )
-        toastLabel.backgroundColor = .appTint
-        toastLabel.textColor = .appWhite
+        //   toastLabel.backgroundColor = .appTint
+        //  toastLabel.textColor = .appWhite
         toastLabel.font = .appCaption
         toastLabel.textAlignment = .center
         toastLabel.text = message

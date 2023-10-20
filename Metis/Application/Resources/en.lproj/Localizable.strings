@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Metis
+
+  Created by Veronika Zelinkova on 20.10.2023.
+  
+*/
+
+"generalAppName" = "Metis";
+"generalError" = "Error";
+"generalOk" = "OK";
