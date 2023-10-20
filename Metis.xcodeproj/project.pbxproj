@@ -45,6 +45,9 @@
 		CA37A9042AE29A2A008D0A4A /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37A8CE2AE29A2A008D0A4A /* Store.swift */; };
 		CA37A9052AE29A2A008D0A4A /* StoreContaining.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37A8CF2AE29A2A008D0A4A /* StoreContaining.swift */; };
 		CA37A9062AE29A2A008D0A4A /* PublishingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37A8D02AE29A2A008D0A4A /* PublishingStore.swift */; };
+		CA37A9092AE29BB9008D0A4A /* DependencyInjection in Frameworks */ = {isa = PBXBuildFile; productRef = CA37A9082AE29BB9008D0A4A /* DependencyInjection */; };
+		CA37A90C2AE29BC9008D0A4A /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = CA37A90B2AE29BC9008D0A4A /* Networking */; };
+		CA37A90F2AE29BD3008D0A4A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CA37A90E2AE29BD3008D0A4A /* Kingfisher */; };
 		E12D44B45D13500945E194CF /* Pods_defaults_Metis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A8B312CE9A34E1D68F53AB /* Pods_defaults_Metis.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,7 +102,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA37A90F2AE29BD3008D0A4A /* Kingfisher in Frameworks */,
+				CA37A90C2AE29BC9008D0A4A /* Networking in Frameworks */,
 				E12D44B45D13500945E194CF /* Pods_defaults_Metis.framework in Frameworks */,
+				CA37A9092AE29BB9008D0A4A /* DependencyInjection in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +418,11 @@
 			dependencies = (
 			);
 			name = Metis;
+			packageProductDependencies = (
+				CA37A9082AE29BB9008D0A4A /* DependencyInjection */,
+				CA37A90B2AE29BC9008D0A4A /* Networking */,
+				CA37A90E2AE29BD3008D0A4A /* Kingfisher */,
+			);
 			productName = Metis;
 			productReference = CA37A8602AE29099008D0A4A /* Metis.app */;
 			productType = "com.apple.product-type.application";
@@ -440,6 +451,11 @@
 				Base,
 			);
 			mainGroup = CA37A8572AE29099008D0A4A;
+			packageReferences = (
+				CA37A9072AE29BB9008D0A4A /* XCRemoteSwiftPackageReference "ios-dependency-injection" */,
+				CA37A90A2AE29BC9008D0A4A /* XCRemoteSwiftPackageReference "ios-networking" */,
+				CA37A90D2AE29BD3008D0A4A /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = CA37A8612AE29099008D0A4A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -825,6 +841,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CA37A9072AE29BB9008D0A4A /* XCRemoteSwiftPackageReference "ios-dependency-injection" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:strvcom/ios-dependency-injection.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.3;
+			};
+		};
+		CA37A90A2AE29BC9008D0A4A /* XCRemoteSwiftPackageReference "ios-networking" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/strvcom/ios-networking";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.4;
+			};
+		};
+		CA37A90D2AE29BD3008D0A4A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CA37A9082AE29BB9008D0A4A /* DependencyInjection */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA37A9072AE29BB9008D0A4A /* XCRemoteSwiftPackageReference "ios-dependency-injection" */;
+			productName = DependencyInjection;
+		};
+		CA37A90B2AE29BC9008D0A4A /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA37A90A2AE29BC9008D0A4A /* XCRemoteSwiftPackageReference "ios-networking" */;
+			productName = Networking;
+		};
+		CA37A90E2AE29BD3008D0A4A /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA37A90D2AE29BD3008D0A4A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CA37A8582AE29099008D0A4A /* Project object */;
 }

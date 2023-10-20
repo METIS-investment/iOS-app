@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "ios-dependency-injection",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:strvcom/ios-dependency-injection.git",
+      "state" : {
+        "revision" : "8dbf23b56f11ecc34580745d16141e4d2a4c5129",
+        "version" : "1.0.3"
+      }
+    },
+    {
+      "identity" : "ios-networking",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/strvcom/ios-networking",
+      "state" : {
+        "revision" : "4adea89da789d133c12d402d2d39684b08657e2c",
+        "version" : "0.0.4"
+      }
+    },
+    {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher",
+      "state" : {
+        "revision" : "b6f62758f21a8c03cd64f4009c037cfa580a256e",
+        "version" : "7.9.1"
+      }
+    }
+  ],
+  "version" : 2
+}
