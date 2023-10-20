@@ -66,5 +66,10 @@ extension SignInCoordinator {
 // MARK: - Handle events
 
 private extension SignInCoordinator {
-    func handle(event _: SignInViewEvent) {}
+    func handle(event: SignInViewEvent) {
+        switch event {
+        case .finished:
+            eventSubject.send(.finished)
+        }
+    }
 }

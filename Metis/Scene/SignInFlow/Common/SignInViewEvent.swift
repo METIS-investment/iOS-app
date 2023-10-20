@@ -7,4 +7,6 @@
 
 import Foundation
 
-enum SignInViewEvent {}
+enum SignInViewEvent {
+    case finished
+}

@@ -45,11 +45,11 @@ private extension SignInViewController {
         let config = GIDConfiguration(clientID: clientID)
         GIDSignIn.sharedInstance.configuration = config
 
-        GIDSignIn.sharedInstance.signIn(withPresenting: self) { [unowned self] result, _ in
-            /* if let error == error {
-                 store.send(action: .didReceiveError(error: error))
-                 return
-             } */
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { [unowned self] result, error in
+            if error != nil {
+                store.send(action: .didReceiveError(error: error!))
+                return
+            }
 
             guard let user = result?.user,
                   let idToken = user.idToken?.tokenString
@@ -62,8 +62,7 @@ private extension SignInViewController {
                 accessToken: user.accessToken.tokenString
             )
 
-            print("AAAXXX \(credential)")
-            // store.send(action: .didTapSignIn)
+            store.send(action: .didFinishSignIn)
         }
     }
 }

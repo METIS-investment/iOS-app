@@ -11,5 +11,5 @@ enum SignInAction {
     case viewDidLoad
     case didReceiveData(data: SignInViewData)
     case didReceiveError(error: Error)
-    case didTapSignIn
+    case didFinishSignIn
 }

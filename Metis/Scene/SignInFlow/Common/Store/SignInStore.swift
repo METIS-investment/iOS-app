@@ -44,8 +44,8 @@ final class SignInStore: PublishingStore, ObservableObject {
                 .updating(\.error, with: error)
                 .updating(\.status, with: .ready)
 
-        case .didTapSignIn:
-            break
+        case .didFinishSignIn:
+            eventSubject.send(.finished)
         }
     }
 }
