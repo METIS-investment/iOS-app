@@ -71,6 +71,15 @@
 		CA37A9572AE2A5C9008D0A4A /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CA37A9562AE2A5C9008D0A4A /* GoogleSignInSwift */; };
 		CA37A95A2AE2A60D008D0A4A /* CombineExt in Frameworks */ = {isa = PBXBuildFile; productRef = CA37A9592AE2A60D008D0A4A /* CombineExt */; };
 		CA7E50812AE2AA5A00D4BD71 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50802AE2AA5A00D4BD71 /* main.swift */; };
+		CA7E50872AE2B10700D4BD71 /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50862AE2B10700D4BD71 /* SignInCoordinator.swift */; };
+		CA7E50892AE2B13D00D4BD71 /* SignInCoordinatorEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50882AE2B13D00D4BD71 /* SignInCoordinatorEvent.swift */; };
+		CA7E508C2AE2B15E00D4BD71 /* SignInStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E508B2AE2B15E00D4BD71 /* SignInStore.swift */; };
+		CA7E508E2AE2B16400D4BD71 /* SignInState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E508D2AE2B16400D4BD71 /* SignInState.swift */; };
+		CA7E50902AE2B16B00D4BD71 /* SignInAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E508F2AE2B16B00D4BD71 /* SignInAction.swift */; };
+		CA7E50922AE2B17B00D4BD71 /* SignInViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50912AE2B17B00D4BD71 /* SignInViewData.swift */; };
+		CA7E50942AE2B18300D4BD71 /* SignInViewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50932AE2B18300D4BD71 /* SignInViewEvent.swift */; };
+		CA7E50962AE2B1D500D4BD71 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50952AE2B1D500D4BD71 /* SignInView.swift */; };
+		CA7E50982AE2B29000D4BD71 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA7E50972AE2B29000D4BD71 /* GoogleService-Info.plist */; };
 		E12D44B45D13500945E194CF /* Pods_defaults_Metis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A8B312CE9A34E1D68F53AB /* Pods_defaults_Metis.framework */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +142,15 @@
 		CA37A93E2AE2A2C3008D0A4A /* DashboardCoordinatorEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinatorEvent.swift; sourceTree = "<group>"; };
 		CA37A9432AE2A333008D0A4A /* Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		CA7E50802AE2AA5A00D4BD71 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		CA7E50862AE2B10700D4BD71 /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
+		CA7E50882AE2B13D00D4BD71 /* SignInCoordinatorEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinatorEvent.swift; sourceTree = "<group>"; };
+		CA7E508B2AE2B15E00D4BD71 /* SignInStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInStore.swift; sourceTree = "<group>"; };
+		CA7E508D2AE2B16400D4BD71 /* SignInState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInState.swift; sourceTree = "<group>"; };
+		CA7E508F2AE2B16B00D4BD71 /* SignInAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAction.swift; sourceTree = "<group>"; };
+		CA7E50912AE2B17B00D4BD71 /* SignInViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewData.swift; sourceTree = "<group>"; };
+		CA7E50932AE2B18300D4BD71 /* SignInViewEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewEvent.swift; sourceTree = "<group>"; };
+		CA7E50952AE2B1D500D4BD71 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		CA7E50972AE2B29000D4BD71 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +206,7 @@
 		CA37A8622AE29099008D0A4A /* Metis */ = {
 			isa = PBXGroup;
 			children = (
+				CA7E50972AE2B29000D4BD71 /* GoogleService-Info.plist */,
 				CA37A9402AE2A313008D0A4A /* Configurations */,
 				CA37A9232AE2A064008D0A4A /* R.generated.swift */,
 				CA37A8712AE2909A008D0A4A /* Info.plist */,
@@ -230,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				CA37A92C2AE2A143008D0A4A /* MainTabBar */,
+				CA7E50822AE2B0DA00D4BD71 /* SignInFlow */,
 				CA37A9112AE29C0A008D0A4A /* DashboardFlow */,
 				CA37A9122AE29C10008D0A4A /* StoriesFlow */,
 				CA37A9132AE29C17008D0A4A /* ProfileFlow */,
@@ -546,6 +566,53 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
+		CA7E50822AE2B0DA00D4BD71 /* SignInFlow */ = {
+			isa = PBXGroup;
+			children = (
+				CA7E50832AE2B0EC00D4BD71 /* Coordinator */,
+				CA7E50852AE2B0F400D4BD71 /* Common */,
+				CA7E50842AE2B0F100D4BD71 /* UI */,
+			);
+			path = SignInFlow;
+			sourceTree = "<group>";
+		};
+		CA7E50832AE2B0EC00D4BD71 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CA7E50862AE2B10700D4BD71 /* SignInCoordinator.swift */,
+				CA7E50882AE2B13D00D4BD71 /* SignInCoordinatorEvent.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		CA7E50842AE2B0F100D4BD71 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CA7E50952AE2B1D500D4BD71 /* SignInView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		CA7E50852AE2B0F400D4BD71 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CA7E508A2AE2B15300D4BD71 /* Store */,
+				CA7E50912AE2B17B00D4BD71 /* SignInViewData.swift */,
+				CA7E50932AE2B18300D4BD71 /* SignInViewEvent.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CA7E508A2AE2B15300D4BD71 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				CA7E508F2AE2B16B00D4BD71 /* SignInAction.swift */,
+				CA7E508D2AE2B16400D4BD71 /* SignInState.swift */,
+				CA7E508B2AE2B15E00D4BD71 /* SignInStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 		E93355D58DF84B2AC796322A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -640,6 +707,7 @@
 			files = (
 				CA37A9462AE2A333008D0A4A /* Development.xcconfig in Resources */,
 				CA37A8702AE2909A008D0A4A /* LaunchScreen.storyboard in Resources */,
+				CA7E50982AE2B29000D4BD71 /* GoogleService-Info.plist in Resources */,
 				CA37A9292AE2A12F008D0A4A /* Localizable.strings in Resources */,
 				CA37A86D2AE2909A008D0A4A /* Assets.xcassets in Resources */,
 			);
@@ -752,9 +820,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA37A9362AE2A1B8008D0A4A /* MainTabBarCoordinator.swift in Sources */,
+				CA7E508C2AE2B15E00D4BD71 /* SignInStore.swift in Sources */,
 				CA37A9242AE2A064008D0A4A /* R.generated.swift in Sources */,
 				CA37A8DD2AE29A2A008D0A4A /* SceneCoordinating.swift in Sources */,
 				CA37A9192AE29C71008D0A4A /* DashboardState.swift in Sources */,
+				CA7E50942AE2B18300D4BD71 /* SignInViewEvent.swift in Sources */,
+				CA7E50872AE2B10700D4BD71 /* SignInCoordinator.swift in Sources */,
 				CA37A8D82AE29A2A008D0A4A /* View+OnFirstAppear.swift in Sources */,
 				CA37A8EC2AE29A2A008D0A4A /* SceneManifest.swift in Sources */,
 				CA37A8FF2AE29A2A008D0A4A /* ViewControllerCoordinator.swift in Sources */,
@@ -768,6 +839,7 @@
 				CA37A9172AE29C57008D0A4A /* DashboardAction.swift in Sources */,
 				CA37A8EF2AE29A2A008D0A4A /* Configuration.swift in Sources */,
 				CA37A8E62AE29A2A008D0A4A /* ActiveScene.swift in Sources */,
+				CA7E50892AE2B13D00D4BD71 /* SignInCoordinatorEvent.swift in Sources */,
 				CA37A8D22AE29A2A008D0A4A /* UIViewController+Toast.swift in Sources */,
 				CA37A91D2AE29CEF008D0A4A /* DashboardViewData.swift in Sources */,
 				CA37A8FA2AE29A2A008D0A4A /* ManagerRegistration.swift in Sources */,
@@ -785,15 +857,19 @@
 				CA37A8642AE29099008D0A4A /* AppDelegate.swift in Sources */,
 				CA37A8F92AE29A2A008D0A4A /* StoreRegistration.swift in Sources */,
 				CA37A9382AE2A1B8008D0A4A /* MainTabBarViewController.swift in Sources */,
+				CA7E50902AE2B16B00D4BD71 /* SignInAction.swift in Sources */,
 				CA37A91B2AE29C97008D0A4A /* DashboardStore.swift in Sources */,
 				CA37A9352AE2A1B8008D0A4A /* MainTabBarCoordinatorEvent.swift in Sources */,
 				CA37A8D42AE29A2A008D0A4A /* UISceneDelegate+AppCoordinator.swift in Sources */,
+				CA7E508E2AE2B16400D4BD71 /* SignInState.swift in Sources */,
 				CA37A93A2AE2A217008D0A4A /* TabBarControllerCoordinator.swift in Sources */,
 				CA37A8662AE29099008D0A4A /* SceneDelegate.swift in Sources */,
 				CA37A8ED2AE29A2A008D0A4A /* SceneConfiguration.swift in Sources */,
 				CA37A8D52AE29A2A008D0A4A /* UIColor+AppColors.swift in Sources */,
 				CA37A8D32AE29A2A008D0A4A /* Collection+SafeSubscript.swift in Sources */,
+				CA7E50962AE2B1D500D4BD71 /* SignInView.swift in Sources */,
 				CA37A8D62AE29A2A008D0A4A /* Color+AppColors.swift in Sources */,
+				CA7E50922AE2B17B00D4BD71 /* SignInViewData.swift in Sources */,
 				CA37A8D12AE29A2A008D0A4A /* UIFont+AppFonts.swift in Sources */,
 				CA37A9042AE29A2A008D0A4A /* Store.swift in Sources */,
 				CA37A9032AE29A2A008D0A4A /* StoreState.swift in Sources */,
@@ -955,11 +1031,11 @@
 				DEVELOPMENT_TEAM = THNASY6U4C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Metis/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_BUNDLE_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "To upload videos from your device, apply effects and download posts, allow access to your Photos.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "To upload videos from your device, apply effects and download posts, allow access to your Photos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -971,7 +1047,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "metis-investment.com.Metis";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.metis-investment.app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -990,11 +1066,11 @@
 				DEVELOPMENT_TEAM = THNASY6U4C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Metis/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_BUNDLE_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "To upload videos from your device, apply effects and download posts, allow access to your Photos.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "To upload videos from your device, apply effects and download posts, allow access to your Photos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1006,7 +1082,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "metis-investment.com.Metis";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.metis-investment.app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
