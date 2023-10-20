@@ -17,18 +17,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mie-bm-2ck" customClass="GIDSignInButton">
-                                <rect key="frame" x="146.66666666666666" y="402" width="100" height="48"/>
+                                <rect key="frame" x="32" y="402" width="329" height="48"/>
                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="avd-Uh-cYx"/>
                                     <constraint firstAttribute="height" constant="48" id="yJz-EP-7fP"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfZ-4V-TlR">
+                                <rect key="frame" x="156.33333333333334" y="231.33333333333334" width="80.666666666666657" height="40.666666666666657"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mie-bm-2ck" secondAttribute="trailing" constant="32" id="0FW-vY-A15"/>
+                            <constraint firstItem="mie-bm-2ck" firstAttribute="top" secondItem="JfZ-4V-TlR" secondAttribute="bottom" constant="130" id="0tb-tE-kvj"/>
                             <constraint firstItem="mie-bm-2ck" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="YxU-2N-hbB"/>
+                            <constraint firstItem="mie-bm-2ck" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="anY-eF-g29"/>
+                            <constraint firstItem="JfZ-4V-TlR" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="bHz-7D-yam"/>
                             <constraint firstItem="mie-bm-2ck" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="zUy-2E-jfF"/>
                         </constraints>
                     </view>
