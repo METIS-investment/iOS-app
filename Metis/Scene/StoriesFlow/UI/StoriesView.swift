@@ -1,5 +1,5 @@
 //
-//  DashboardView.swift
+//  StoriesView.swift
 //  Metis
 //
 //  Created by Veronika Zelinkova on 20.10.2023.
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct DashboardView: View {
-    @StateObject private var store: DashboardStore
+struct StoriesView: View {
+    @StateObject private var store: StoriesStore
 
-    init(store: DashboardStore) {
+    init(store: StoriesStore) {
         _store = .init(wrappedValue: store)
     }
 
@@ -19,28 +19,28 @@ struct DashboardView: View {
             .onFirstAppear {
                 store.send(action: .viewDidLoad)
             }
-            .alert(isPresented: .constant(store.state.error != nil)) {
-                Alert(
-                    title: Text(LocalizedString.generalError()),
-                    message: Text(store.state.error?.localizedDescription ?? ""),
-                    dismissButton: .default(
-                        Text(LocalizedString.generalOk())
-                    )
-                )
-            }
+        /* .alert(isPresented: .constant(store.state.error != nil)) {
+             Alert(
+                 title: Text(LocalizedString.generalError()),
+                 message: Text(store.state.error?.localizedDescription ?? ""),
+                 dismissButton: .default(
+                     Text(LocalizedString.generalOk())
+                 )
+             )
+         }*/
     }
 }
 
 // MARK: - Private
 
-private extension DashboardView {
+private extension StoriesView {
     @ViewBuilder
     var contentView: some View {
         switch store.state.status {
         case .loading:
             ProgressView()
         case .ready:
-            Text("DashboardView")
+            Text("StoriesView")
             /* if let pizzas = store.state.data?.pizzas, pizzas.isNotEmpty {
                  listView(for: pizzas)
              } else {

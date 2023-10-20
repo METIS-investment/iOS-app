@@ -37,7 +37,9 @@ final class MainTabBarCoordinator {
 extension MainTabBarCoordinator: TabBarControllerCoordinator {
     func start() {
         tabBarController.viewControllers = [
-            makeDashboardFlow().rootViewController,
+            makeDashboardView().rootViewController,
+            makeStoriesView().rootViewController,
+            makeProfileView().rootViewController,
         ]
     }
 }
@@ -58,37 +60,75 @@ private extension MainTabBarCoordinator {
         return tabBarController
     }
 
-    func makeDashboardFlow() -> ViewControllerCoordinator {
+    func makeDashboardView() -> DashboardCoordinator {
         let coordinator = DashboardCoordinator(container: container)
-
         childCoordinators.append(coordinator)
         coordinator.start()
 
+        coordinator.eventPublisher
+            .sink { [weak self] event in
+                self?.handle(event: event)
+            }
+            .store(in: &cancellables)
+
         coordinator.rootViewController.tabBarItem = UITabBarItem(
             title: nil,
-            image: UIImage(systemName: "home"),
-            selectedImage: UIImage(systemName: "home")
+            image: UIImage(systemName: "house"),
+            selectedImage: UIImage(systemName: "house")
         )
 
         return coordinator
     }
 
-    /* func makeProfileFlow() -> ViewControllerCoordinator {
-         let coordinator = ProfileCoordinator(container: container)
+    func makeStoriesView() -> StoriesCoordinator {
+        let coordinator = StoriesCoordinator(container: container)
 
-         childCoordinators.append(coordinator)
-         coordinator.start()
+        childCoordinators.append(coordinator)
+        coordinator.start()
 
-         coordinator.rootViewController.tabBarItem = UITabBarItem(
-             title: nil,
-             image: UIImage(systemName: "person"),
-             selectedImage: UIImage(systemName: "person")
-         )
+        coordinator.eventPublisher
+            .sink { [weak self] event in
+                self?.handle(event: event)
+            }
+            .store(in: &cancellables)
 
-         return coordinator
-     } */
+        coordinator.rootViewController.tabBarItem = UITabBarItem(
+            title: nil,
+            image: UIImage(systemName: "book"),
+            selectedImage: UIImage(systemName: "book")
+        )
+
+        return coordinator
+    }
+
+    func makeProfileView() -> ProfileCoordinator {
+        let coordinator = ProfileCoordinator(container: container)
+
+        childCoordinators.append(coordinator)
+        coordinator.start()
+
+        coordinator.eventPublisher
+            .sink { [weak self] event in
+                self?.handle(event: event)
+            }
+            .store(in: &cancellables)
+
+        coordinator.rootViewController.tabBarItem = UITabBarItem(
+            title: nil,
+            image: UIImage(systemName: "person"),
+            selectedImage: UIImage(systemName: "person")
+        )
+
+        return coordinator
+    }
 }
 
 private extension MainTabBarCoordinator {
     func handle(event _: MainTabBarViewEvent) {}
+
+    func handle(event _: DashboardCoordinatorEvent) {}
+
+    func handle(event _: StoriesCoordinatorEvent) {}
+
+    func handle(event _: ProfileCoordinatorEvent) {}
 }
