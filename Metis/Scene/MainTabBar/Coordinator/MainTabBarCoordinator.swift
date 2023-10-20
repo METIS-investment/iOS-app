@@ -66,8 +66,8 @@ private extension MainTabBarCoordinator {
 
         coordinator.rootViewController.tabBarItem = UITabBarItem(
             title: nil,
-            image: UIImage(systemName: "magnifyingglass"),
-            selectedImage: UIImage(systemName: "magnifyingglass")
+            image: UIImage(systemName: "home"),
+            selectedImage: UIImage(systemName: "home")
         )
 
         return coordinator

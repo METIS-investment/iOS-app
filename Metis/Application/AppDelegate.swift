@@ -14,8 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AppCoordinatorContaining 
     var coordinator: AppCoordinating!
 
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        setupUI()
-
         coordinator = AppCoordinator()
         coordinator.start()
 
@@ -47,10 +45,4 @@ private extension AppDelegate {
     /* func setupFirebase() {
          FirebaseApp.configure()
      }*/
-
-    func setupUI() {
-        UITabBar.appearance().tintColor = .white
-        UITabBar.appearance().barStyle = .black
-        UITabBar.appearance().isTranslucent = false
-    }
 }
