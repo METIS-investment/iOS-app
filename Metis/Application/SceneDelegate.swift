@@ -27,6 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 }
 
 // MARK: - Setup
+
 private extension SceneDelegate {
     func setupInitialScene(with windowScene: UIWindowScene) {
         let window = UIWindow(windowScene: windowScene)

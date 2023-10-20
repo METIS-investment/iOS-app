@@ -70,6 +70,7 @@
 		CA37A9552AE2A5C9008D0A4A /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = CA37A9542AE2A5C9008D0A4A /* GoogleSignIn */; };
 		CA37A9572AE2A5C9008D0A4A /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CA37A9562AE2A5C9008D0A4A /* GoogleSignInSwift */; };
 		CA37A95A2AE2A60D008D0A4A /* CombineExt in Frameworks */ = {isa = PBXBuildFile; productRef = CA37A9592AE2A60D008D0A4A /* CombineExt */; };
+		CA7E50812AE2AA5A00D4BD71 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50802AE2AA5A00D4BD71 /* main.swift */; };
 		E12D44B45D13500945E194CF /* Pods_defaults_Metis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A8B312CE9A34E1D68F53AB /* Pods_defaults_Metis.framework */; };
 /* End PBXBuildFile section */
 
@@ -131,6 +132,7 @@
 		CA37A93C2AE2A26E008D0A4A /* DashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinator.swift; sourceTree = "<group>"; };
 		CA37A93E2AE2A2C3008D0A4A /* DashboardCoordinatorEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinatorEvent.swift; sourceTree = "<group>"; };
 		CA37A9432AE2A333008D0A4A /* Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		CA7E50802AE2AA5A00D4BD71 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 				CA37A87B2AE2993D008D0A4A /* Resources */,
 				CA37A8632AE29099008D0A4A /* AppDelegate.swift */,
 				CA37A8652AE29099008D0A4A /* SceneDelegate.swift */,
+				CA7E50802AE2AA5A00D4BD71 /* main.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -756,6 +759,7 @@
 				CA37A8EC2AE29A2A008D0A4A /* SceneManifest.swift in Sources */,
 				CA37A8FF2AE29A2A008D0A4A /* ViewControllerCoordinator.swift in Sources */,
 				CA37A93D2AE2A26E008D0A4A /* DashboardCoordinator.swift in Sources */,
+				CA7E50812AE2AA5A00D4BD71 /* main.swift in Sources */,
 				CA37A8FE2AE29A2A008D0A4A /* EventEmitting.swift in Sources */,
 				CA37A8FD2AE29A2A008D0A4A /* PropertyPublisher.swift in Sources */,
 				CA37A9062AE29A2A008D0A4A /* PublishingStore.swift in Sources */,
@@ -951,11 +955,17 @@
 				DEVELOPMENT_TEAM = THNASY6U4C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Metis/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_BUNDLE_NAME)";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "To upload videos from your device, apply effects and download posts, allow access to your Photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "To upload videos from your device, apply effects and download posts, allow access to your Photos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -980,11 +990,17 @@
 				DEVELOPMENT_TEAM = THNASY6U4C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Metis/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_BUNDLE_NAME)";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "To upload videos from your device, apply effects and download posts, allow access to your Photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "To upload videos from your device, apply effects and download posts, allow access to your Photos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

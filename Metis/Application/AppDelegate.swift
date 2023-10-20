@@ -19,14 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AppCoordinatorContaining 
         coordinator = AppCoordinator()
         coordinator.start()
 
-        setupFirebase()
+        //  setupFirebase()
 
         return true
     }
 
-    func application(_: UIApplication, open url: URL, options _: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
-        GIDSignIn.sharedInstance.handle(url)
-    }
+    /*  func application(_: UIApplication, open url: URL, options _: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+         GIDSignIn.sharedInstance.handle(url)
+     }*/
 }
 
 // MARK: - UISceneSession Lifecycle
@@ -44,9 +44,9 @@ extension AppDelegate {
 // MARK: - Setup
 
 private extension AppDelegate {
-    func setupFirebase() {
-        FirebaseApp.configure()
-    }
+    /* func setupFirebase() {
+         FirebaseApp.configure()
+     }*/
 
     func setupUI() {
         UITabBar.appearance().tintColor = .white

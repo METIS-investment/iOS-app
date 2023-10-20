@@ -10,12 +10,10 @@ import Foundation
 struct Configuration: Decodable {
     private enum CodingKeys: String, CodingKey {
         case apiBaseUrl = "API_BASE_URL"
-        case apiOrderUrl = "API_ORDER_URL"
         case sceneManifest = "UIApplicationSceneManifest"
     }
 
     let apiBaseUrl: URL
-    let apiOrderUrl: URL
     let sceneManifest: SceneManifest?
 }
 

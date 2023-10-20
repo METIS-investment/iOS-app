@@ -39,12 +39,6 @@
 	<false/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Roboto-Regular.ttf</string>
-		<string>Roboto-Medium.ttf</string>
-		<string>Pacifico-Regular.ttf</string>
-	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
