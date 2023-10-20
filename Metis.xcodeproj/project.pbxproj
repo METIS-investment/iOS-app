@@ -110,6 +110,8 @@
 		CA7E50DF2AE2BE4400D4BD71 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50DE2AE2BE4400D4BD71 /* ProfileCoordinator.swift */; };
 		CA7E50E12AE2BED200D4BD71 /* StoriesCoordinatorEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50E02AE2BED200D4BD71 /* StoriesCoordinatorEvent.swift */; };
 		CA7E50E32AE2BEE200D4BD71 /* ProfileCoordinatorEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50E22AE2BEE200D4BD71 /* ProfileCoordinatorEvent.swift */; };
+		CA7E50E92AE2BF6500D4BD71 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50E82AE2BF6500D4BD71 /* ProfileView.swift */; };
+		CA7E50EB2AE2BF6A00D4BD71 /* StoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50EA2AE2BF6A00D4BD71 /* StoriesView.swift */; };
 		E12D44B45D13500945E194CF /* Pods_defaults_Metis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A8B312CE9A34E1D68F53AB /* Pods_defaults_Metis.framework */; };
 /* End PBXBuildFile section */
 
@@ -189,6 +191,8 @@
 		CA7E50DE2AE2BE4400D4BD71 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		CA7E50E02AE2BED200D4BD71 /* StoriesCoordinatorEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesCoordinatorEvent.swift; sourceTree = "<group>"; };
 		CA7E50E22AE2BEE200D4BD71 /* ProfileCoordinatorEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinatorEvent.swift; sourceTree = "<group>"; };
+		CA7E50E82AE2BF6500D4BD71 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		CA7E50EA2AE2BF6A00D4BD71 /* StoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -547,6 +551,8 @@
 			isa = PBXGroup;
 			children = (
 				CA7E50DA2AE2BE2900D4BD71 /* Coordinator */,
+				CA7E50E42AE2BF4000D4BD71 /* Common */,
+				CA7E50E52AE2BF4500D4BD71 /* UI */,
 			);
 			path = StoriesFlow;
 			sourceTree = "<group>";
@@ -555,6 +561,8 @@
 			isa = PBXGroup;
 			children = (
 				CA7E50DB2AE2BE2E00D4BD71 /* Coordinator */,
+				CA7E50E62AE2BF5100D4BD71 /* Common */,
+				CA7E50E72AE2BF5600D4BD71 /* UI */,
 			);
 			path = ProfileFlow;
 			sourceTree = "<group>";
@@ -695,6 +703,36 @@
 				CA7E50E22AE2BEE200D4BD71 /* ProfileCoordinatorEvent.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		CA7E50E42AE2BF4000D4BD71 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CA7E50E52AE2BF4500D4BD71 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CA7E50EA2AE2BF6A00D4BD71 /* StoriesView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		CA7E50E62AE2BF5100D4BD71 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CA7E50E72AE2BF5600D4BD71 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CA7E50E82AE2BF6500D4BD71 /* ProfileView.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		E93355D58DF84B2AC796322A /* Frameworks */ = {
@@ -940,6 +978,7 @@
 				CA7E50E12AE2BED200D4BD71 /* StoriesCoordinatorEvent.swift in Sources */,
 				CA7E509A2AE2B4C900D4BD71 /* SignInViewController.swift in Sources */,
 				CA37A93D2AE2A26E008D0A4A /* DashboardCoordinator.swift in Sources */,
+				CA7E50EB2AE2BF6A00D4BD71 /* StoriesView.swift in Sources */,
 				CA7E50812AE2AA5A00D4BD71 /* main.swift in Sources */,
 				CA7E50E32AE2BEE200D4BD71 /* ProfileCoordinatorEvent.swift in Sources */,
 				CA37A8FE2AE29A2A008D0A4A /* EventEmitting.swift in Sources */,
@@ -953,6 +992,7 @@
 				CA37A8E62AE29A2A008D0A4A /* ActiveScene.swift in Sources */,
 				CA7E50892AE2B13D00D4BD71 /* SignInCoordinatorEvent.swift in Sources */,
 				CA37A8D22AE29A2A008D0A4A /* UIViewController+Toast.swift in Sources */,
+				CA7E50E92AE2BF6500D4BD71 /* ProfileView.swift in Sources */,
 				CA37A91D2AE29CEF008D0A4A /* DashboardViewData.swift in Sources */,
 				CA37A8FA2AE29A2A008D0A4A /* ManagerRegistration.swift in Sources */,
 				CA37A9002AE29A2A008D0A4A /* NavigationControllerCoordinator.swift in Sources */,
