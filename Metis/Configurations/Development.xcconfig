@@ -9,6 +9,6 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 APP_BUNDLE_NAME = Metis
-APP_BUNDLE_IDENTIFIER = metis-investment.com.Metis
+APP_BUNDLE_IDENTIFIER = com.metis-investment.app
 
 API_BASE_URL = http:/$()/httpbin.org/
