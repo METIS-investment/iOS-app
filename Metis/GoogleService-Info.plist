@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>709611040106-8vgnih90lale6j4uir91o5gelim0ba5k.apps.googleusercontent.com</string>
+	<string>709611040106-celbppka0rrul0qkjcl9vv1ue72p49v6.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.709611040106-8vgnih90lale6j4uir91o5gelim0ba5k</string>
+	<string>com.googleusercontent.apps.709611040106-celbppka0rrul0qkjcl9vv1ue72p49v6</string>
 	<key>API_KEY</key>
 	<string>AIzaSyDzUr35w9rgVN7UN0JT-UqdVAnq7q2qlvM</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.metis-investment.app</string>
+	<string>com.metis-investment</string>
 	<key>PROJECT_ID</key>
 	<string>collabothon23fra-1267</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:709611040106:ios:88a7c1f28139e3996f4913</string>
+	<string>1:709611040106:ios:eb97d3f2c204f87a6f4913</string>
 </dict>
 </plist>

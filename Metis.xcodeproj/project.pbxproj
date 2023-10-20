@@ -73,7 +73,6 @@
 		CA7E50902AE2B16B00D4BD71 /* SignInAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E508F2AE2B16B00D4BD71 /* SignInAction.swift */; };
 		CA7E50922AE2B17B00D4BD71 /* SignInViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50912AE2B17B00D4BD71 /* SignInViewData.swift */; };
 		CA7E50942AE2B18300D4BD71 /* SignInViewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50932AE2B18300D4BD71 /* SignInViewEvent.swift */; };
-		CA7E50982AE2B29000D4BD71 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA7E50972AE2B29000D4BD71 /* GoogleService-Info.plist */; };
 		CA7E509A2AE2B4C900D4BD71 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50992AE2B4C900D4BD71 /* SignInViewController.swift */; };
 		CA7E509C2AE2B4D600D4BD71 /* SignInViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7E509B2AE2B4D600D4BD71 /* SignInViewController.storyboard */; };
 		CA7E509E2AE2B59F00D4BD71 /* ReactiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E509D2AE2B59F00D4BD71 /* ReactiveViewController.swift */; };
@@ -122,6 +121,7 @@
 		CA7E50FD2AE2C05900D4BD71 /* ProfileViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50FC2AE2C05900D4BD71 /* ProfileViewData.swift */; };
 		CA7E50FF2AE2C06900D4BD71 /* StoriesViewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50FE2AE2C06900D4BD71 /* StoriesViewEvent.swift */; };
 		CA7E51012AE2C07600D4BD71 /* ProfileViewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E51002AE2C07600D4BD71 /* ProfileViewEvent.swift */; };
+		CA7E51032AE2DAD800D4BD71 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA7E51022AE2DAD800D4BD71 /* GoogleService-Info.plist */; };
 		E12D44B45D13500945E194CF /* Pods_defaults_Metis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A8B312CE9A34E1D68F53AB /* Pods_defaults_Metis.framework */; };
 /* End PBXBuildFile section */
 
@@ -191,7 +191,6 @@
 		CA7E508F2AE2B16B00D4BD71 /* SignInAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAction.swift; sourceTree = "<group>"; };
 		CA7E50912AE2B17B00D4BD71 /* SignInViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewData.swift; sourceTree = "<group>"; };
 		CA7E50932AE2B18300D4BD71 /* SignInViewEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewEvent.swift; sourceTree = "<group>"; };
-		CA7E50972AE2B29000D4BD71 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA7E50992AE2B4C900D4BD71 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		CA7E509B2AE2B4D600D4BD71 /* SignInViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInViewController.storyboard; sourceTree = "<group>"; };
 		CA7E509D2AE2B59F00D4BD71 /* ReactiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +212,7 @@
 		CA7E50FC2AE2C05900D4BD71 /* ProfileViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewData.swift; sourceTree = "<group>"; };
 		CA7E50FE2AE2C06900D4BD71 /* StoriesViewEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewEvent.swift; sourceTree = "<group>"; };
 		CA7E51002AE2C07600D4BD71 /* ProfileViewEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewEvent.swift; sourceTree = "<group>"; };
+		CA7E51022AE2DAD800D4BD71 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,7 +290,7 @@
 		CA37A8622AE29099008D0A4A /* Metis */ = {
 			isa = PBXGroup;
 			children = (
-				CA7E50972AE2B29000D4BD71 /* GoogleService-Info.plist */,
+				CA7E51022AE2DAD800D4BD71 /* GoogleService-Info.plist */,
 				CA37A9402AE2A313008D0A4A /* Configurations */,
 				CA37A9232AE2A064008D0A4A /* R.generated.swift */,
 				CA37A8712AE2909A008D0A4A /* Info.plist */,
@@ -897,10 +897,10 @@
 			files = (
 				CA37A9462AE2A333008D0A4A /* Development.xcconfig in Resources */,
 				CA37A8702AE2909A008D0A4A /* LaunchScreen.storyboard in Resources */,
-				CA7E50982AE2B29000D4BD71 /* GoogleService-Info.plist in Resources */,
 				CA7E509C2AE2B4D600D4BD71 /* SignInViewController.storyboard in Resources */,
 				CA37A9292AE2A12F008D0A4A /* Localizable.strings in Resources */,
 				CA37A86D2AE2909A008D0A4A /* Assets.xcassets in Resources */,
+				CA7E51032AE2DAD800D4BD71 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
