@@ -5,26 +5,52 @@
 //  Created by Veronika Zelinkova on 20.10.2023.
 //
 
+import FirebaseCore
+import GoogleSignIn
 import UIKit
 
-@main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, AppCoordinatorContaining {
+    // swiftlint:disable:next implicitly_unwrapped_optional
+    var coordinator: AppCoordinating!
+
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        true
+        setupUI()
+
+        coordinator = AppCoordinator()
+        coordinator.start()
+
+        setupFirebase()
+
+        return true
     }
 
-    // MARK: UISceneSession Lifecycle
+    func application(_: UIApplication, open url: URL, options _: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+        GIDSignIn.sharedInstance.handle(url)
+    }
+}
 
+// MARK: - UISceneSession Lifecycle
+
+extension AppDelegate {
     func application(_: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options _: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+        guard let name = Configuration.default.sceneManifest?.configurations.applicationScenes.first?.name else {
+            fatalError("No scene configuration")
+        }
+
+        return UISceneConfiguration(name: name, sessionRole: connectingSceneSession.role)
+    }
+}
+
+// MARK: - Setup
+
+private extension AppDelegate {
+    func setupFirebase() {
+        FirebaseApp.configure()
     }
 
-    func application(_: UIApplication, didDiscardSceneSessions _: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    func setupUI() {
+        UITabBar.appearance().tintColor = .white
+        UITabBar.appearance().barStyle = .black
+        UITabBar.appearance().isTranslucent = false
     }
 }

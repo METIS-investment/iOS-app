@@ -1,0 +1,14 @@
+//
+//  Development.xcconfig
+//  nennos-pizza
+//
+//  Created by Veronika Zelinkova on 04.09.2023.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+APP_BUNDLE_NAME = Metis
+APP_BUNDLE_IDENTIFIER = metis-investment.com.Metis
+
+API_BASE_URL = http:/$()/httpbin.org/
