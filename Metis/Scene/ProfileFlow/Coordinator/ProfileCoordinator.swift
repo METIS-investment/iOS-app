@@ -66,4 +66,3 @@ extension ProfileCoordinator {
 private extension ProfileCoordinator {
     func handle(event _: ProfileViewEvent) {}
 }
-

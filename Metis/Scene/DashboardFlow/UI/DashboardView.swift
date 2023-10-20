@@ -19,15 +19,15 @@ struct DashboardView: View {
             .onFirstAppear {
                 store.send(action: .viewDidLoad)
             }
-         .alert(isPresented: .constant(store.state.error != nil)) {
-             Alert(
-                 title: Text(LocalizedString.generalError()),
-                 message: Text(store.state.error?.localizedDescription ?? ""),
-                 dismissButton: .default(
-                     Text(LocalizedString.generalOk())
-                 )
-             )
-         }
+            .alert(isPresented: .constant(store.state.error != nil)) {
+                Alert(
+                    title: Text(LocalizedString.generalError()),
+                    message: Text(store.state.error?.localizedDescription ?? ""),
+                    dismissButton: .default(
+                        Text(LocalizedString.generalOk())
+                    )
+                )
+            }
     }
 }
 

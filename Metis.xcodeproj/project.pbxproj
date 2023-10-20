@@ -112,6 +112,16 @@
 		CA7E50E32AE2BEE200D4BD71 /* ProfileCoordinatorEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50E22AE2BEE200D4BD71 /* ProfileCoordinatorEvent.swift */; };
 		CA7E50E92AE2BF6500D4BD71 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50E82AE2BF6500D4BD71 /* ProfileView.swift */; };
 		CA7E50EB2AE2BF6A00D4BD71 /* StoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50EA2AE2BF6A00D4BD71 /* StoriesView.swift */; };
+		CA7E50EF2AE2BFD900D4BD71 /* StoriesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50EE2AE2BFD900D4BD71 /* StoriesAction.swift */; };
+		CA7E50F12AE2BFDF00D4BD71 /* StoriesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50F02AE2BFDF00D4BD71 /* StoriesState.swift */; };
+		CA7E50F32AE2BFE600D4BD71 /* StoriesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50F22AE2BFE600D4BD71 /* StoriesStore.swift */; };
+		CA7E50F52AE2BFFD00D4BD71 /* ProfileAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50F42AE2BFFD00D4BD71 /* ProfileAction.swift */; };
+		CA7E50F72AE2C00400D4BD71 /* ProfileState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50F62AE2C00400D4BD71 /* ProfileState.swift */; };
+		CA7E50F92AE2C00A00D4BD71 /* ProfileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50F82AE2C00A00D4BD71 /* ProfileStore.swift */; };
+		CA7E50FB2AE2C04700D4BD71 /* StoriesViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50FA2AE2C04700D4BD71 /* StoriesViewData.swift */; };
+		CA7E50FD2AE2C05900D4BD71 /* ProfileViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50FC2AE2C05900D4BD71 /* ProfileViewData.swift */; };
+		CA7E50FF2AE2C06900D4BD71 /* StoriesViewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E50FE2AE2C06900D4BD71 /* StoriesViewEvent.swift */; };
+		CA7E51012AE2C07600D4BD71 /* ProfileViewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E51002AE2C07600D4BD71 /* ProfileViewEvent.swift */; };
 		E12D44B45D13500945E194CF /* Pods_defaults_Metis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A8B312CE9A34E1D68F53AB /* Pods_defaults_Metis.framework */; };
 /* End PBXBuildFile section */
 
@@ -193,6 +203,16 @@
 		CA7E50E22AE2BEE200D4BD71 /* ProfileCoordinatorEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinatorEvent.swift; sourceTree = "<group>"; };
 		CA7E50E82AE2BF6500D4BD71 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		CA7E50EA2AE2BF6A00D4BD71 /* StoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesView.swift; sourceTree = "<group>"; };
+		CA7E50EE2AE2BFD900D4BD71 /* StoriesAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesAction.swift; sourceTree = "<group>"; };
+		CA7E50F02AE2BFDF00D4BD71 /* StoriesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesState.swift; sourceTree = "<group>"; };
+		CA7E50F22AE2BFE600D4BD71 /* StoriesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesStore.swift; sourceTree = "<group>"; };
+		CA7E50F42AE2BFFD00D4BD71 /* ProfileAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAction.swift; sourceTree = "<group>"; };
+		CA7E50F62AE2C00400D4BD71 /* ProfileState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileState.swift; sourceTree = "<group>"; };
+		CA7E50F82AE2C00A00D4BD71 /* ProfileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStore.swift; sourceTree = "<group>"; };
+		CA7E50FA2AE2C04700D4BD71 /* StoriesViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewData.swift; sourceTree = "<group>"; };
+		CA7E50FC2AE2C05900D4BD71 /* ProfileViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewData.swift; sourceTree = "<group>"; };
+		CA7E50FE2AE2C06900D4BD71 /* StoriesViewEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewEvent.swift; sourceTree = "<group>"; };
+		CA7E51002AE2C07600D4BD71 /* ProfileViewEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewEvent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -708,6 +728,9 @@
 		CA7E50E42AE2BF4000D4BD71 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CA7E50ED2AE2BFD000D4BD71 /* Store */,
+				CA7E50FA2AE2C04700D4BD71 /* StoriesViewData.swift */,
+				CA7E50FE2AE2C06900D4BD71 /* StoriesViewEvent.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -723,6 +746,9 @@
 		CA7E50E62AE2BF5100D4BD71 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CA7E50EC2AE2BFCB00D4BD71 /* Store */,
+				CA7E50FC2AE2C05900D4BD71 /* ProfileViewData.swift */,
+				CA7E51002AE2C07600D4BD71 /* ProfileViewEvent.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -733,6 +759,26 @@
 				CA7E50E82AE2BF6500D4BD71 /* ProfileView.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		CA7E50EC2AE2BFCB00D4BD71 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				CA7E50F42AE2BFFD00D4BD71 /* ProfileAction.swift */,
+				CA7E50F62AE2C00400D4BD71 /* ProfileState.swift */,
+				CA7E50F82AE2C00A00D4BD71 /* ProfileStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		CA7E50ED2AE2BFD000D4BD71 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				CA7E50EE2AE2BFD900D4BD71 /* StoriesAction.swift */,
+				CA7E50F02AE2BFDF00D4BD71 /* StoriesState.swift */,
+				CA7E50F22AE2BFE600D4BD71 /* StoriesStore.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 		E93355D58DF84B2AC796322A /* Frameworks */ = {
@@ -967,8 +1013,10 @@
 				CA37A9362AE2A1B8008D0A4A /* MainTabBarCoordinator.swift in Sources */,
 				CA7E508C2AE2B15E00D4BD71 /* SignInStore.swift in Sources */,
 				CA37A9242AE2A064008D0A4A /* R.generated.swift in Sources */,
+				CA7E50FB2AE2C04700D4BD71 /* StoriesViewData.swift in Sources */,
 				CA7E50A02AE2B5D100D4BD71 /* ReactiveViewControllerProtocol.swift in Sources */,
 				CA37A8DD2AE29A2A008D0A4A /* SceneCoordinating.swift in Sources */,
+				CA7E50F72AE2C00400D4BD71 /* ProfileState.swift in Sources */,
 				CA37A9192AE29C71008D0A4A /* DashboardState.swift in Sources */,
 				CA7E50942AE2B18300D4BD71 /* SignInViewEvent.swift in Sources */,
 				CA7E50872AE2B10700D4BD71 /* SignInCoordinator.swift in Sources */,
@@ -990,15 +1038,18 @@
 				CA37A9172AE29C57008D0A4A /* DashboardAction.swift in Sources */,
 				CA37A8EF2AE29A2A008D0A4A /* Configuration.swift in Sources */,
 				CA37A8E62AE29A2A008D0A4A /* ActiveScene.swift in Sources */,
+				CA7E50FD2AE2C05900D4BD71 /* ProfileViewData.swift in Sources */,
 				CA7E50892AE2B13D00D4BD71 /* SignInCoordinatorEvent.swift in Sources */,
 				CA37A8D22AE29A2A008D0A4A /* UIViewController+Toast.swift in Sources */,
 				CA7E50E92AE2BF6500D4BD71 /* ProfileView.swift in Sources */,
 				CA37A91D2AE29CEF008D0A4A /* DashboardViewData.swift in Sources */,
 				CA37A8FA2AE29A2A008D0A4A /* ManagerRegistration.swift in Sources */,
 				CA37A9002AE29A2A008D0A4A /* NavigationControllerCoordinator.swift in Sources */,
+				CA7E51012AE2C07600D4BD71 /* ProfileViewEvent.swift in Sources */,
 				CA37A9222AE29D43008D0A4A /* DashboardView.swift in Sources */,
 				CA37A8DC2AE29A2A008D0A4A /* AppCoordinating.swift in Sources */,
 				CA37A8DE2AE29A2A008D0A4A /* InitialSceneCoordinating.swift in Sources */,
+				CA7E50F52AE2BFFD00D4BD71 /* ProfileAction.swift in Sources */,
 				CA37A8DB2AE29A2A008D0A4A /* AppCoordinator.swift in Sources */,
 				CA37A93F2AE2A2C3008D0A4A /* DashboardCoordinatorEvent.swift in Sources */,
 				CA37A9022AE29A2A008D0A4A /* Coordinator.swift in Sources */,
@@ -1011,20 +1062,25 @@
 				CA7E50DF2AE2BE4400D4BD71 /* ProfileCoordinator.swift in Sources */,
 				CA37A8F92AE29A2A008D0A4A /* StoreRegistration.swift in Sources */,
 				CA37A9382AE2A1B8008D0A4A /* MainTabBarViewController.swift in Sources */,
+				CA7E50F12AE2BFDF00D4BD71 /* StoriesState.swift in Sources */,
+				CA7E50EF2AE2BFD900D4BD71 /* StoriesAction.swift in Sources */,
 				CA7E50902AE2B16B00D4BD71 /* SignInAction.swift in Sources */,
 				CA37A91B2AE29C97008D0A4A /* DashboardStore.swift in Sources */,
 				CA37A9352AE2A1B8008D0A4A /* MainTabBarCoordinatorEvent.swift in Sources */,
+				CA7E50FF2AE2C06900D4BD71 /* StoriesViewEvent.swift in Sources */,
 				CA37A8D42AE29A2A008D0A4A /* UISceneDelegate+AppCoordinator.swift in Sources */,
 				CA7E508E2AE2B16400D4BD71 /* SignInState.swift in Sources */,
 				CA37A93A2AE2A217008D0A4A /* TabBarControllerCoordinator.swift in Sources */,
 				CA7E509E2AE2B59F00D4BD71 /* ReactiveViewController.swift in Sources */,
 				CA37A8662AE29099008D0A4A /* SceneDelegate.swift in Sources */,
+				CA7E50F92AE2C00A00D4BD71 /* ProfileStore.swift in Sources */,
 				CA37A8ED2AE29A2A008D0A4A /* SceneConfiguration.swift in Sources */,
 				CA37A8D52AE29A2A008D0A4A /* UIColor+AppColors.swift in Sources */,
 				CA37A8D32AE29A2A008D0A4A /* Collection+SafeSubscript.swift in Sources */,
 				CA37A8D62AE29A2A008D0A4A /* Color+AppColors.swift in Sources */,
 				CA7E50922AE2B17B00D4BD71 /* SignInViewData.swift in Sources */,
 				CA37A8D12AE29A2A008D0A4A /* UIFont+AppFonts.swift in Sources */,
+				CA7E50F32AE2BFE600D4BD71 /* StoriesStore.swift in Sources */,
 				CA37A9042AE29A2A008D0A4A /* Store.swift in Sources */,
 				CA37A9032AE29A2A008D0A4A /* StoreState.swift in Sources */,
 				CA37A8FB2AE29A2A008D0A4A /* ServiceRegistration.swift in Sources */,
