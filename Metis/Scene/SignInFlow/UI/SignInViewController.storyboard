@@ -29,15 +29,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elevating Growth, Empowering Tomorrow" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WI-HJ-J6Q">
+                                <rect key="frame" x="40.333333333333343" y="297" width="312.66666666666663" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mie-bm-2ck" secondAttribute="trailing" constant="32" id="0FW-vY-A15"/>
                             <constraint firstItem="mie-bm-2ck" firstAttribute="top" secondItem="JfZ-4V-TlR" secondAttribute="bottom" constant="130" id="0tb-tE-kvj"/>
+                            <constraint firstItem="8WI-HJ-J6Q" firstAttribute="top" secondItem="JfZ-4V-TlR" secondAttribute="bottom" constant="25" id="Nee-47-jDn"/>
                             <constraint firstItem="mie-bm-2ck" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="YxU-2N-hbB"/>
                             <constraint firstItem="mie-bm-2ck" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="anY-eF-g29"/>
                             <constraint firstItem="JfZ-4V-TlR" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="bHz-7D-yam"/>
+                            <constraint firstItem="8WI-HJ-J6Q" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="rrf-RV-8rE"/>
                             <constraint firstItem="mie-bm-2ck" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="zUy-2E-jfF"/>
                         </constraints>
                     </view>
