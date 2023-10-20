@@ -48,7 +48,6 @@
 				C3788AA75042DB866C7E1FA3 /* Pods-defaults-Metis.debug.xcconfig */,
 				4CF301BBE3F8D887F512323C /* Pods-defaults-Metis.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -73,15 +72,47 @@
 		CA37A8622AE29099008D0A4A /* Metis */ = {
 			isa = PBXGroup;
 			children = (
-				CA37A8632AE29099008D0A4A /* AppDelegate.swift */,
-				CA37A8652AE29099008D0A4A /* SceneDelegate.swift */,
+				CA37A8772AE29911008D0A4A /* Application */,
+				CA37A8782AE29916008D0A4A /* Common */,
+				CA37A8792AE2991B008D0A4A /* Scene */,
 				CA37A8672AE29099008D0A4A /* ViewController.swift */,
 				CA37A8692AE29099008D0A4A /* Main.storyboard */,
-				CA37A86C2AE2909A008D0A4A /* Assets.xcassets */,
 				CA37A86E2AE2909A008D0A4A /* LaunchScreen.storyboard */,
-				CA37A8712AE2909A008D0A4A /* Info.plist */,
 			);
 			path = Metis;
+			sourceTree = "<group>";
+		};
+		CA37A8772AE29911008D0A4A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CA37A87B2AE2993D008D0A4A /* Resources */,
+				CA37A8712AE2909A008D0A4A /* Info.plist */,
+				CA37A8632AE29099008D0A4A /* AppDelegate.swift */,
+				CA37A8652AE29099008D0A4A /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		CA37A8782AE29916008D0A4A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CA37A8792AE2991B008D0A4A /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		CA37A87B2AE2993D008D0A4A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CA37A86C2AE2909A008D0A4A /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		E93355D58DF84B2AC796322A /* Frameworks */ = {
@@ -100,9 +131,12 @@
 			buildConfigurationList = CA37A8742AE2909A008D0A4A /* Build configuration list for PBXNativeTarget "Metis" */;
 			buildPhases = (
 				7158A6C83AC91727E5579CC8 /* [CP] Check Pods Manifest.lock */,
+				CA37A87C2AE2996C008D0A4A /* R.generate */,
 				CA37A85C2AE29099008D0A4A /* Sources */,
 				CA37A85D2AE29099008D0A4A /* Frameworks */,
 				CA37A85E2AE29099008D0A4A /* Resources */,
+				CA37A87D2AE2998C008D0A4A /* SwiftFormat */,
+				CA37A87E2AE2999E008D0A4A /* Swiftlint */,
 				A031DCBD3D17F46E3C5B15AF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -199,6 +233,63 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-defaults-Metis/Pods-defaults-Metis-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		CA37A87C2AE2996C008D0A4A /* R.generate */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = R.generate;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		CA37A87D2AE2998C008D0A4A /* SwiftFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftFormat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"$SRCROOT\"\n";
+		};
+		CA37A87E2AE2999E008D0A4A /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "podSwiftlint=\"${PODS_ROOT}/SwiftLint/swiftlint\"\n\nif [ -f \"$podSwiftlint\" ]; then\n    $podSwiftlint\nelse\n    echo \"'warning: Cannot find SwiftLint in the expected Cocoapods location.\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
