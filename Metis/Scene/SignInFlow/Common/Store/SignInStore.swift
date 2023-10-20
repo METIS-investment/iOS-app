@@ -6,7 +6,9 @@
 //
 
 import Combine
+import Firebase
 import Foundation
+import GoogleSignIn
 
 final class SignInStore: PublishingStore, ObservableObject {
     // MARK: - Public properties
@@ -41,6 +43,9 @@ final class SignInStore: PublishingStore, ObservableObject {
             state = state
                 .updating(\.error, with: error)
                 .updating(\.status, with: .ready)
+
+        case .didTapSignIn:
+            break
         }
     }
 }
@@ -66,4 +71,6 @@ private extension SignInStore {
             }
         }
     }
+
+    func signIn() {}
 }

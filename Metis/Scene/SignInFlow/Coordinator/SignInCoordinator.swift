@@ -49,7 +49,9 @@ extension SignInCoordinator: EventEmitting {
 extension SignInCoordinator {
     func makeSignInViewController() -> UIViewController {
         let store = resolve(SignInStore.self)
-        let view = SignInView(store: store)
+        let viewController = R.storyboard.signInViewController.instantiateInitialViewController(
+            store: store
+        )
 
         store.eventPublisher
             .sink { [weak self] event in
@@ -57,7 +59,7 @@ extension SignInCoordinator {
             }
             .store(in: &cancellables)
 
-        return UIHostingController(rootView: view)
+        return viewController
     }
 }
 

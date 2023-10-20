@@ -159,17 +159,23 @@ struct _R {
         var googleServiceInfoPlist: RswiftResources.FileResource { .init(name: "GoogleService-Info", pathExtension: "plist", bundle: bundle, locale: LocaleReference.none) }
     }
 
-    /// This `_R.storyboard` struct is generated, and contains static references to 1 storyboards.
+    /// This `_R.storyboard` struct is generated, and contains static references to 2 storyboards.
     struct storyboard {
         let bundle: Foundation.Bundle
         var launchScreen: launchScreen { .init(bundle: bundle) }
+        var signInViewController: signInViewController { .init(bundle: bundle) }
 
         func launchScreen(bundle: Foundation.Bundle) -> launchScreen {
             .init(bundle: bundle)
         }
 
+        func signInViewController(bundle: Foundation.Bundle) -> signInViewController {
+            .init(bundle: bundle)
+        }
+
         func validate() throws {
             try launchScreen.validate()
+            try signInViewController.validate()
         }
 
         /// Storyboard `LaunchScreen`.
@@ -179,6 +185,16 @@ struct _R {
             let bundle: Foundation.Bundle
 
             let name = "LaunchScreen"
+            func validate() throws {}
+        }
+
+        /// Storyboard `SignInViewController`.
+        struct signInViewController: RswiftResources.StoryboardReference, RswiftResources.InitialControllerContainer {
+            typealias InitialController = SignInViewController
+
+            let bundle: Foundation.Bundle
+
+            let name = "SignInViewController"
             func validate() throws {}
         }
     }
