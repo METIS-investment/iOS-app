@@ -40,17 +40,19 @@ private extension StoriesView {
         case .loading:
             ProgressView()
         case .ready:
-            VStack(alignment: .leading, spacing: 0) {
-                HStack {
-                    Spacer()
-                    Text("Featured Stories")
-                        .foregroundColor(.black)
-                        .font(.custom("Nunito-Bold", size: 20))
-                        .padding(.top, 15)
-                    Spacer()
-                }
+            HStack {
+                Spacer()
+                Text("Featured Stories")
+                    .foregroundColor(.black)
+                    .font(.custom("Nunito-Bold", size: 20))
+                    .padding(.top, 15)
+                Spacer()
             }
-            Spacer()
+
+            ScrollView {
+                VStack(alignment: .leading, spacing: 0) {}
+                Spacer()
+            }
         }
     }
 }

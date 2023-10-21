@@ -43,17 +43,17 @@ private extension ProfileView {
         case .loading:
             ProgressView()
         case .ready:
+            HStack {
+                Spacer()
+                Text("My Profile")
+                    .foregroundColor(.black)
+                    .font(.custom("Nunito-Bold", size: 20))
+                    .padding(.top, 15)
+                Spacer()
+            }
+
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {
-                    HStack {
-                        Spacer()
-                        Text("My Profile")
-                            .foregroundColor(.black)
-                            .font(.custom("Nunito-Bold", size: 20))
-                            .padding(.top, 15)
-                        Spacer()
-                    }
-
                     HStack(alignment: .bottom) {
                         Text(auth?.displayName ?? "Name")
                             .font(.custom("Nunito-Bold", size: 25))
@@ -129,8 +129,8 @@ private extension ProfileView {
                         .foregroundColor(.black)
                         .padding(.top, 50)
                 }
-                .padding([.leading, .trailing], 24)
             }
+            .padding([.leading, .trailing], 24)
         }
     }
 }

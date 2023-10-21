@@ -40,17 +40,47 @@ private extension DashboardView {
         case .loading:
             ProgressView()
         case .ready:
-            VStack(alignment: .leading, spacing: 0) {
-                HStack {
-                    Spacer()
-                    Text("My Portfolio")
-                        .foregroundColor(.black)
-                        .font(.custom("Nunito-Bold", size: 20))
-                        .padding(.top, 15)
-                    Spacer()
-                }
+            HStack {
+                Spacer()
+                Text("My Portfolio")
+                    .foregroundColor(.black)
+                    .font(.custom("Nunito-Bold", size: 20))
+                    .padding(.top, 15)
                 Spacer()
             }
+
+            ScrollView {
+                VStack(alignment: .leading, spacing: 0) {
+                    HStack {
+                        Text("5000$")
+                            .foregroundColor(.black)
+                            .font(.custom("Nunito-Bold", size: 40))
+
+                        Text("invested")
+                            .font(.custom("Nunito-Regular", size: 20))
+                            .foregroundColor(.black)
+                            .padding(.leading, 20)
+
+                        Spacer()
+                    }
+                    .padding(.top, 30)
+
+                    HStack {
+                        Text("5$")
+                            .foregroundColor(.black)
+                            .font(.custom("Nunito-Bold", size: 25))
+
+                        Text("monthly dividend")
+                            .font(.custom("Nunito-Regular", size: 20))
+                            .foregroundColor(.black)
+                            .padding(.leading, 20)
+
+                        Spacer()
+                    }
+                    .padding(.top, 10)
+                }
+            }
+            .padding([.leading, .trailing], 24)
         }
     }
 }
