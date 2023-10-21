@@ -56,10 +56,18 @@ private extension DashboardView {
                         .font(.custom("Nunito-Regular", size: 15))
                         .foregroundColor(.gray)
 
-                    Text("5000$")
-                        .foregroundColor(.black)
-                        .font(.custom("Nunito-Bold", size: 40))
-                        .padding(.top, 3)
+                    HStack {
+                        Text("5000$")
+                            .foregroundColor(.black)
+                            .font(.custom("Nunito-Bold", size: 40))
+
+                        Spacer()
+
+                        Text("+20%")
+                            .foregroundColor(.green)
+                            .font(.custom("Nunito-Bold", size: 40))
+                    }
+                    .padding(.top, 3)
 
                     Text("Investment: 4000$")
                         .font(.custom("Nunito-Regular", size: 12))
@@ -68,16 +76,6 @@ private extension DashboardView {
                     Text("Dividends: 1000$")
                         .font(.custom("Nunito-Regular", size: 12))
                         .foregroundColor(.gray)
-
-                    /* Text("Monthly dividend")
-                         .font(.custom("Nunito-Regular", size: 15))
-                         .foregroundColor(.gray)
-                         .padding(.top, 10)
-
-                     Text("5$")
-                         .foregroundColor(.black)
-                         .font(.custom("Nunito-Bold", size: 25))
-                         .padding(.top, 3) */
 
                     Button(action: {
                         store.send(action: .didTapInvest)
@@ -97,7 +95,7 @@ private extension DashboardView {
                     Text("Prediction")
                         .font(.custom("Nunito-Bold", size: 20))
                         .foregroundColor(.black)
-                        .padding(.top, 50)
+                        .padding(.top, 40)
 
                     LineView(
                         data: [8, 9, 11, 13, 15, 18, 21, 25, 34],

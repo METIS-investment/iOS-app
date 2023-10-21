@@ -72,7 +72,7 @@ private extension SignInViewController {
                     country: "",
                     street: "",
                     city: "",
-                    zipCode: 100_000
+                    zipCode: 10000
                 )))
             }
         }
