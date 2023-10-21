@@ -51,7 +51,7 @@ final class DashboardStore: PublishingStore, ObservableObject {
             doOneTimeInvestment(value: 10000)
 
         case let .didFinishedOneTimeInvestment(value):
-            eventSubject.send(.showToast("You successfully invested \(Int(value / 100))$"))
+            eventSubject.send(.showToast("You successfully invested \(Int(value / 100))€"))
 
             let investment = state.invested + value
 

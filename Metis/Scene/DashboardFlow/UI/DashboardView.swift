@@ -122,7 +122,7 @@ private extension DashboardView {
                             .foregroundColor(.gray)
                     }
                     .padding([.leading, .trailing], 24)
-                    .offset(y: 250)
+                    .offset(y: 280)
                 }
                 .padding([.leading, .trailing], 24)
             }
