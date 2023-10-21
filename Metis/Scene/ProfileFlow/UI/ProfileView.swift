@@ -82,14 +82,16 @@ private extension ProfileView {
                             .foregroundColor(.black)
 
                         Spacer()
-
-                        Button(action: {
-                            store.send(action: .didTapRemoveCard)
-                        }, label: {
-                            Text("Remove")
-                                .font(.custom("Nunito-Regular", size: 12))
-                                .foregroundColor(.gray)
-                        })
+                        
+                        if store.state.isBillable {
+                            Button(action: {
+                                store.send(action: .didTapRemoveCard)
+                            }, label: {
+                                Text("Remove")
+                                    .font(.custom("Nunito-Regular", size: 12))
+                                    .foregroundColor(.gray)
+                            })
+                        }
                     }
                     .padding(.top, 50)
 
