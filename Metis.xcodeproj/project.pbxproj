@@ -126,6 +126,11 @@
 		CA9EB1332AE3E84900E300D7 /* StoreRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EB1322AE3E84900E300D7 /* StoreRegistration.swift */; };
 		CA9EB1352AE3E84F00E300D7 /* ManagerRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EB1342AE3E84F00E300D7 /* ManagerRegistration.swift */; };
 		CA9EB1372AE3E85400E300D7 /* ServiceRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EB1362AE3E85400E300D7 /* ServiceRegistration.swift */; };
+		CA9EB13B2AE3EBF600E300D7 /* InvestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EB13A2AE3EBF600E300D7 /* InvestService.swift */; };
+		CA9EB13D2AE3EBFC00E300D7 /* InvestServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EB13C2AE3EBFC00E300D7 /* InvestServicing.swift */; };
+		CA9EB13F2AE3EC3F00E300D7 /* InvestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EB13E2AE3EC3F00E300D7 /* InvestRouter.swift */; };
+		CA9EB1412AE3EC7900E300D7 /* InvestValueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EB1402AE3EC7900E300D7 /* InvestValueModel.swift */; };
+		CA9EB1432AE3ECB900E300D7 /* RecurringInvestValueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EB1422AE3ECB900E300D7 /* RecurringInvestValueModel.swift */; };
 		E12D44B45D13500945E194CF /* Pods_defaults_Metis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A8B312CE9A34E1D68F53AB /* Pods_defaults_Metis.framework */; };
 /* End PBXBuildFile section */
 
@@ -220,6 +225,11 @@
 		CA9EB1322AE3E84900E300D7 /* StoreRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreRegistration.swift; sourceTree = "<group>"; };
 		CA9EB1342AE3E84F00E300D7 /* ManagerRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerRegistration.swift; sourceTree = "<group>"; };
 		CA9EB1362AE3E85400E300D7 /* ServiceRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRegistration.swift; sourceTree = "<group>"; };
+		CA9EB13A2AE3EBF600E300D7 /* InvestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestService.swift; sourceTree = "<group>"; };
+		CA9EB13C2AE3EBFC00E300D7 /* InvestServicing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestServicing.swift; sourceTree = "<group>"; };
+		CA9EB13E2AE3EC3F00E300D7 /* InvestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestRouter.swift; sourceTree = "<group>"; };
+		CA9EB1402AE3EC7900E300D7 /* InvestValueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestValueModel.swift; sourceTree = "<group>"; };
+		CA9EB1422AE3ECB900E300D7 /* RecurringInvestValueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurringInvestValueModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -404,6 +414,9 @@
 		CA37A89A2AE29A29008D0A4A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CA9EB13A2AE3EBF600E300D7 /* InvestService.swift */,
+				CA9EB13C2AE3EBFC00E300D7 /* InvestServicing.swift */,
+				CA9EB13E2AE3EC3F00E300D7 /* InvestRouter.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -761,6 +774,8 @@
 		CA9EB1382AE3E88000E300D7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CA9EB1402AE3EC7900E300D7 /* InvestValueModel.swift */,
+				CA9EB1422AE3ECB900E300D7 /* RecurringInvestValueModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1014,6 +1029,7 @@
 				CA7E50F72AE2C00400D4BD71 /* ProfileState.swift in Sources */,
 				CA37A9192AE29C71008D0A4A /* DashboardState.swift in Sources */,
 				CA7E50942AE2B18300D4BD71 /* SignInViewEvent.swift in Sources */,
+				CA9EB1412AE3EC7900E300D7 /* InvestValueModel.swift in Sources */,
 				CA7E50872AE2B10700D4BD71 /* SignInCoordinator.swift in Sources */,
 				CA37A8D82AE29A2A008D0A4A /* View+OnFirstAppear.swift in Sources */,
 				CA37A8EC2AE29A2A008D0A4A /* SceneManifest.swift in Sources */,
@@ -1036,6 +1052,8 @@
 				CA37A8E62AE29A2A008D0A4A /* ActiveScene.swift in Sources */,
 				CA7E50FD2AE2C05900D4BD71 /* ProfileViewData.swift in Sources */,
 				CA9EB1302AE3E81200E300D7 /* InitialSceneCoordinator.swift in Sources */,
+				CA9EB13B2AE3EBF600E300D7 /* InvestService.swift in Sources */,
+				CA9EB13D2AE3EBFC00E300D7 /* InvestServicing.swift in Sources */,
 				CA7E50892AE2B13D00D4BD71 /* SignInCoordinatorEvent.swift in Sources */,
 				CA37A8D22AE29A2A008D0A4A /* UIViewController+Toast.swift in Sources */,
 				CA7E50E92AE2BF6500D4BD71 /* ProfileView.swift in Sources */,
@@ -1048,6 +1066,7 @@
 				CA37A93F2AE2A2C3008D0A4A /* DashboardCoordinatorEvent.swift in Sources */,
 				CA9EB1352AE3E84F00E300D7 /* ManagerRegistration.swift in Sources */,
 				CA37A9022AE29A2A008D0A4A /* Coordinator.swift in Sources */,
+				CA9EB1432AE3ECB900E300D7 /* RecurringInvestValueModel.swift in Sources */,
 				CA37A8E72AE29A2A008D0A4A /* LocalizedString.swift in Sources */,
 				CA37A9012AE29A2A008D0A4A /* AppCoordinatorContaining.swift in Sources */,
 				CA37A9202AE29D14008D0A4A /* DashboardViewEvent.swift in Sources */,
@@ -1058,6 +1077,7 @@
 				CA7E50DF2AE2BE4400D4BD71 /* ProfileCoordinator.swift in Sources */,
 				CA37A9382AE2A1B8008D0A4A /* MainTabBarViewController.swift in Sources */,
 				CA7E50F12AE2BFDF00D4BD71 /* StoriesState.swift in Sources */,
+				CA9EB13F2AE3EC3F00E300D7 /* InvestRouter.swift in Sources */,
 				CA7E50EF2AE2BFD900D4BD71 /* StoriesAction.swift in Sources */,
 				CA7E50902AE2B16B00D4BD71 /* SignInAction.swift in Sources */,
 				CA37A91B2AE29C97008D0A4A /* DashboardStore.swift in Sources */,
