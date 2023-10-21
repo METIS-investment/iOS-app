@@ -46,6 +46,13 @@ final class DashboardStore: PublishingStore, ObservableObject {
             state = state
                 .updating(\.error, with: error)
                 .updating(\.status, with: .ready)
+
+        case .didTapInvest:
+            doOneTimeInvestment(value: 100)
+
+        case let .didFinishedOneTimeInvestment(value):
+            eventSubject.send(.showToast("You successfully invested \(value)$"))
+            // reload
         }
     }
 }
@@ -66,6 +73,18 @@ private extension DashboardStore {
             do {
                 let data = DashboardViewData()
                 self?.sendToMainActor(action: .didReceiveData(data: data))
+            } catch {
+                self?.sendToMainActor(action: .didReceiveError(error: error))
+            }
+        }
+    }
+
+    func doOneTimeInvestment(value: Double) {
+        Task { [weak self, investService] in
+            do {
+                let model = InvestValueModel(value: value)
+                try await investService.investOneTime(model: model)
+                self?.sendToMainActor(action: .didFinishedOneTimeInvestment(value: value))
             } catch {
                 self?.sendToMainActor(action: .didReceiveError(error: error))
             }

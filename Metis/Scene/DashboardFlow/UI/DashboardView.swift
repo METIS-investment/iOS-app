@@ -79,6 +79,21 @@ private extension DashboardView {
                          .font(.custom("Nunito-Bold", size: 25))
                          .padding(.top, 3) */
 
+                    Button(action: {
+                        store.send(action: .didTapInvest)
+                    }, label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(.black)
+
+                            Text("Invest".uppercased())
+                                .foregroundColor(.white)
+                                .font(.custom("Nunito-Bold", size: 20))
+                                .padding(10)
+                        }
+                    })
+                    .padding(.top, 20)
+
                     Text("Prediction")
                         .font(.custom("Nunito-Bold", size: 20))
                         .foregroundColor(.black)
