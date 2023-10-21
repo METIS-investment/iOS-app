@@ -5,6 +5,7 @@
 //  Created by Veronika Zelinkova on 20.10.2023.
 //
 
+import Kingfisher
 import SwiftUI
 
 struct StoriesView: View {
@@ -50,9 +51,39 @@ private extension StoriesView {
             }
 
             ScrollView {
-                VStack(alignment: .leading, spacing: 0) {}
-                Spacer()
+                item(title: "Title", description: "description")
+                item(title: "Title", description: "description")
+                item(title: "Title", description: "description")
             }
+            .scrollIndicators(.hidden)
+            .padding([.leading, .trailing], 24)
+            .padding(.top, 20)
+        }
+    }
+
+    func item(title: String, description: String) -> some View {
+        HStack(alignment: .center) {
+            KFImage(URL(string: "https://cdn.vox-cdn.com/thumbor/kt9CNq-5C9fyesBCKIq8XYFq0KA=/0x0:6720x4480/1200x800/filters:focal(2823x1703:3897x2777)/cdn.vox-cdn.com/uploads/chorus_image/image/69163878/GettyImages_1248901260.0.jpg"))
+                .resizable()
+                .cornerRadius(15)
+                .frame(width: 100, height: 100)
+
+            VStack(alignment: .leading) {
+                Text(title)
+                    .font(.custom("Nunito-Bold", size: 20))
+                    .padding(.bottom, 5)
+
+                Text(description)
+                    .font(.custom("Nunito-Regular", size: 18))
+            }
+            .padding(.leading, 15)
+
+            Spacer()
+
+            Button(action: {}, label: {
+                Image(systemName: "chevron.right")
+                    .foregroundColor(.gray)
+            })
         }
     }
 }

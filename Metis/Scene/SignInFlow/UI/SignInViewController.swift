@@ -85,6 +85,8 @@ private extension SignInViewController {
         titleLabel.font = UIFont(name: "Nunito-Bold", size: 40)
         titleLabel.textColor = .black
         descriptionLabel.font = UIFont(name: "Nunito-Regular", size: 15)
+
+        signInButton.colorScheme = .light
     }
 
     func bindToStore() {}
