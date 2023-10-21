@@ -7,6 +7,7 @@
 
 import Foundation
 
+// swiftlint:disable all
 struct User: Codable {
     let first_name: String
     let second_name: String
