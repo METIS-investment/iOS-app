@@ -40,15 +40,17 @@ private extension DashboardView {
         case .loading:
             ProgressView()
         case .ready:
-            Text("DashboardView")
-            /* if let pizzas = store.state.data?.pizzas, pizzas.isNotEmpty {
-                 listView(for: pizzas)
-             } else {
-                 EmptyView(
-                     title: LocalizedString.marketListEmptyViewTitle(),
-                     description: LocalizedString.marketListEmptyViewDescription()
-                 )
-             } */
+            VStack(alignment: .leading, spacing: 0) {
+                HStack {
+                    Spacer()
+                    Text("My Portfolio")
+                        .foregroundColor(.black)
+                        .font(.custom("Nunito-Bold", size: 20))
+                        .padding(.top, 15)
+                    Spacer()
+                }
+                Spacer()
+            }
         }
     }
 }

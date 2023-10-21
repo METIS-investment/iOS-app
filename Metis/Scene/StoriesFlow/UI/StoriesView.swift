@@ -19,15 +19,15 @@ struct StoriesView: View {
             .onFirstAppear {
                 store.send(action: .viewDidLoad)
             }
-        /* .alert(isPresented: .constant(store.state.error != nil)) {
-             Alert(
-                 title: Text(LocalizedString.generalError()),
-                 message: Text(store.state.error?.localizedDescription ?? ""),
-                 dismissButton: .default(
-                     Text(LocalizedString.generalOk())
-                 )
-             )
-         }*/
+            .alert(isPresented: .constant(store.state.error != nil)) {
+                Alert(
+                    title: Text(LocalizedString.generalError()),
+                    message: Text(store.state.error?.localizedDescription ?? ""),
+                    dismissButton: .default(
+                        Text(LocalizedString.generalOk())
+                    )
+                )
+            }
     }
 }
 
@@ -40,15 +40,17 @@ private extension StoriesView {
         case .loading:
             ProgressView()
         case .ready:
-            Text("StoriesView")
-            /* if let pizzas = store.state.data?.pizzas, pizzas.isNotEmpty {
-                 listView(for: pizzas)
-             } else {
-                 EmptyView(
-                     title: LocalizedString.marketListEmptyViewTitle(),
-                     description: LocalizedString.marketListEmptyViewDescription()
-                 )
-             } */
+            VStack(alignment: .leading, spacing: 0) {
+                HStack {
+                    Spacer()
+                    Text("Featured Stories")
+                        .foregroundColor(.black)
+                        .font(.custom("Nunito-Bold", size: 20))
+                        .padding(.top, 15)
+                    Spacer()
+                }
+            }
+            Spacer()
         }
     }
 }
