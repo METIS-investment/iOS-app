@@ -125,6 +125,7 @@
 		CA7E51092AE3C49E00D4BD71 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA7E51082AE3C49D00D4BD71 /* Nunito-Regular.ttf */; };
 		CA7E510A2AE3C4A600D4BD71 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA7E51072AE3C49D00D4BD71 /* Nunito-SemiBold.ttf */; };
 		CA7E510B2AE3C4A900D4BD71 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA7E51062AE3C49200D4BD71 /* Nunito-Bold.ttf */; };
+		CA9EB11E2AE3D66300E300D7 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = CA9EB11D2AE3D66300E300D7 /* SwiftUICharts */; };
 		E12D44B45D13500945E194CF /* Pods_defaults_Metis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A8B312CE9A34E1D68F53AB /* Pods_defaults_Metis.framework */; };
 /* End PBXBuildFile section */
 
@@ -255,6 +256,7 @@
 				CA37A95A2AE2A60D008D0A4A /* CombineExt in Frameworks */,
 				CA37A9552AE2A5C9008D0A4A /* GoogleSignIn in Frameworks */,
 				CA7E50B52AE2B82900D4BD71 /* FirebaseCrashlytics in Frameworks */,
+				CA9EB11E2AE3D66300E300D7 /* SwiftUICharts in Frameworks */,
 				CA37A9092AE29BB9008D0A4A /* DependencyInjection in Frameworks */,
 				CA37A9572AE2A5C9008D0A4A /* GoogleSignInSwift in Frameworks */,
 				CA7E50CF2AE2B82900D4BD71 /* FirebaseMessaging in Frameworks */,
@@ -853,6 +855,7 @@
 				CA7E50D42AE2B82900D4BD71 /* FirebaseRemoteConfigSwift */,
 				CA7E50D62AE2B82900D4BD71 /* FirebaseStorage */,
 				CA7E50D82AE2B82900D4BD71 /* FirebaseStorageCombine-Community */,
+				CA9EB11D2AE3D66300E300D7 /* SwiftUICharts */,
 			);
 			productName = Metis;
 			productReference = CA37A8602AE29099008D0A4A /* Metis.app */;
@@ -889,6 +892,7 @@
 				CA37A9532AE2A5C9008D0A4A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				CA37A9582AE2A60D008D0A4A /* XCRemoteSwiftPackageReference "CombineExt" */,
 				CA7E50A32AE2B82800D4BD71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				CA9EB11C2AE3D66300E300D7 /* XCRemoteSwiftPackageReference "ChartView" */,
 			);
 			productRefGroup = CA37A8612AE29099008D0A4A /* Products */;
 			projectDirPath = "";
@@ -1386,6 +1390,14 @@
 				minimumVersion = 10.16.0;
 			};
 		};
+		CA9EB11C2AE3D66300E300D7 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.5;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1553,6 +1565,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CA7E50A32AE2B82800D4BD71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		CA9EB11D2AE3D66300E300D7 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA9EB11C2AE3D66300E300D7 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

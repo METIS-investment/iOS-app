@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUICharts
 
 struct DashboardView: View {
     @StateObject private var store: DashboardStore
@@ -63,7 +64,7 @@ private extension DashboardView {
 
                         Spacer()
                     }
-                    .padding(.top, 30)
+                    .padding(.top, 20)
 
                     HStack {
                         Text("5$")
@@ -78,6 +79,13 @@ private extension DashboardView {
                         Spacer()
                     }
                     .padding(.top, 10)
+
+                    Text("Prediction")
+                        .font(.custom("Nunito-Bold", size: 20))
+                        .foregroundColor(.black)
+                        .padding(.top, 50)
+
+                    LineView(data: [8, 23, 54, 32, 12, 37, 7, 23, 43], style: .init(backgroundColor: .clear, accentColor: .tint, gradientColor: .init(start: .tint, end: .yellow), textColor: .black, legendTextColor: .gray, dropShadowColor: .white))
                 }
             }
             .padding([.leading, .trailing], 24)

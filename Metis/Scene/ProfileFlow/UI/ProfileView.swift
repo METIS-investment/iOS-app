@@ -69,7 +69,7 @@ private extension ProfileView {
                         })
                         .offset(y: -5)
                     }
-                    .padding(.top, 30)
+                    .padding(.top, 20)
 
                     Text(auth?.email ?? "")
                         .font(.custom("Nunito-Regular", size: 15))
