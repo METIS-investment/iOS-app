@@ -98,7 +98,7 @@ private extension DashboardView {
                         .padding(.top, 40)
 
                     LineView(
-                        data: [store.state.invested / 100, (store.state.invested / 100) * 1.05, (store.state.invested / 100) * 1.05 * 1.05],
+                        data: [store.state.invested / 100, (store.state.invested / 100) * 1.05, (store.state.invested / 100) * 1.05 * 1.05, (store.state.invested / 100) * 1.05 * 1.05 * 1.05, (store.state.invested / 100) * 1.05 * 1.05 * 1.05 * 1.05],
                         style: .init(
                             backgroundColor: .clear,
                             accentColor: .tint,
@@ -109,9 +109,23 @@ private extension DashboardView {
                         )
                     )
                     .disabled(true)
+
+                    HStack {
+                        Text("now")
+                            .font(.custom("Nunito-Regular", size: 12))
+                            .foregroundColor(.gray)
+
+                        Spacer()
+
+                        Text("5 months")
+                            .font(.custom("Nunito-Regular", size: 12))
+                            .foregroundColor(.gray)
+                    }
+                    .padding([.leading, .trailing], 24)
+                    .offset(y: 250)
                 }
+                .padding([.leading, .trailing], 24)
             }
-            .padding([.leading, .trailing], 24)
         }
     }
 }
