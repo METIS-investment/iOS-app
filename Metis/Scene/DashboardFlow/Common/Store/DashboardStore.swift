@@ -19,6 +19,11 @@ final class DashboardStore: PublishingStore, ObservableObject {
     // MARK: - Private properties
 
     private let eventSubject: PassthroughSubject<DashboardViewEvent, Never> = .init()
+    private let investService: InvestServicing
+
+    init(investService: InvestServicing) {
+        self.investService = investService
+    }
 
     // MARK: - Store methods
 

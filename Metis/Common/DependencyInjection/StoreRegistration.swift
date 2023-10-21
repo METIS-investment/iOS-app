@@ -10,7 +10,7 @@ import DependencyInjection
 enum StoreRegistration {
     static func registerDependencies(to container: Container) {
         container.autoregister(
-            in: .new, initializer: DashboardStore.init
+            in: .new, initializer: DashboardStore.init(investService:)
         )
 
         container.autoregister(
