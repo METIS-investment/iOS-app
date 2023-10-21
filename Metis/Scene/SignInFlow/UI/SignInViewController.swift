@@ -11,6 +11,10 @@ import FirebaseCore
 import GoogleSignIn
 import UIKit
 
+enum Constants {
+    static var accessToken: String = ""
+}
+
 final class SignInViewController: ReactiveViewController, StoreContaining {
     // MARK: - UI Components
 
@@ -63,6 +67,8 @@ private extension SignInViewController {
                 withIDToken: idToken,
                 accessToken: user.accessToken.tokenString
             )
+
+            Constants.accessToken = user.accessToken.tokenString
 
             Auth.auth().signIn(with: credential) { _, _ in
                 self?.store.send(action: .didTapSignIn(.init(

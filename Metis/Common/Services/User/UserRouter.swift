@@ -5,6 +5,7 @@
 //  Created by Veronika Zelinkova on 21.10.2023.
 //
 
+import FirebaseAuth
 import Foundation
 import Networking
 
@@ -48,5 +49,9 @@ extension UserRouter: Requestable {
         case .getUser:
             return nil
         }
+    }
+
+    var headers: [String: String]? {
+        ["Authorization": "Bearer \(Constants.accessToken)"]
     }
 }

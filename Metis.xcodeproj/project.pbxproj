@@ -347,7 +347,6 @@
 				CA9EB1232AE3E7D500E300D7 /* Coordinators */,
 				CA37A8AB2AE29A2A008D0A4A /* Configurations */,
 				CA37A8832AE29A29008D0A4A /* Extensions */,
-				CA37A88E2AE29A29008D0A4A /* Managers */,
 				CA37A8C32AE29A2A008D0A4A /* Protocols */,
 				CA37A89A2AE29A29008D0A4A /* Services */,
 				CA37A8A32AE29A2A008D0A4A /* Types */,
@@ -410,13 +409,6 @@
 				CA37A88D2AE29A29008D0A4A /* View+OnFirstAppear.swift */,
 			);
 			path = SwiftUI;
-			sourceTree = "<group>";
-		};
-		CA37A88E2AE29A29008D0A4A /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Managers;
 			sourceTree = "<group>";
 		};
 		CA37A89A2AE29A29008D0A4A /* Services */ = {

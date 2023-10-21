@@ -7,7 +7,6 @@
 
 import Combine
 import DependencyInjection
-import FirebaseAuth
 import UIKit
 
 final class InitialSceneCoordinator {
@@ -28,18 +27,10 @@ final class InitialSceneCoordinator {
 
 extension InitialSceneCoordinator: InitialSceneCoordinating {
     func start() {
-        if Auth.auth().currentUser != nil {
-            let coordinator = makeTabBarView()
-            childCoordinators.append(coordinator)
-            coordinator.start()
-            window.rootViewController = coordinator.rootViewController
-        } else {
-            let coordinator = makeSignInView()
-            childCoordinators.append(coordinator)
-            coordinator.start()
-            window.rootViewController = coordinator.rootViewController
-        }
-
+        let coordinator = makeSignInView()
+        childCoordinators.append(coordinator)
+        coordinator.start()
+        window.rootViewController = coordinator.rootViewController
         window.makeKeyAndVisible()
     }
 }
