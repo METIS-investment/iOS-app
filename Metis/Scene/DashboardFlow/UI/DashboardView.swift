@@ -87,6 +87,7 @@ private extension DashboardView {
                             dropShadowColor: .white
                         )
                     )
+                    .disabled(true)
                 }
             }
             .padding([.leading, .trailing], 24)
