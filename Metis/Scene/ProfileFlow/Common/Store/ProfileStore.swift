@@ -6,6 +6,7 @@
 //
 
 import Combine
+import FirebaseAuth
 import Foundation
 
 final class ProfileStore: PublishingStore, ObservableObject {
@@ -41,6 +42,12 @@ final class ProfileStore: PublishingStore, ObservableObject {
             state = state
                 .updating(\.error, with: error)
                 .updating(\.status, with: .ready)
+
+        case .didTapLogout:
+            logout()
+
+        case .didFinishLogout:
+            eventSubject.send(.logout)
         }
     }
 }
@@ -56,6 +63,17 @@ extension ProfileStore: EventEmitting {
 // MARK: - Private Methods
 
 private extension ProfileStore {
+    func logout() {
+        Task { [weak self] in
+            do {
+                try Auth.auth().signOut()
+                self?.sendToMainActor(action: .didFinishLogout)
+            } catch {
+                self?.sendToMainActor(action: .didReceiveError(error: error))
+            }
+        }
+    }
+
     func fetchViewData() {
         Task { [weak self] in
             do {

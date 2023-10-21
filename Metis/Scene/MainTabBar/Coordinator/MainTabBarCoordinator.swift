@@ -130,5 +130,10 @@ private extension MainTabBarCoordinator {
 
     func handle(event _: StoriesCoordinatorEvent) {}
 
-    func handle(event _: ProfileCoordinatorEvent) {}
+    func handle(event: ProfileCoordinatorEvent) {
+        switch event {
+        case .logout:
+            eventSubject.send(.logout)
+        }
+    }
 }
