@@ -84,7 +84,7 @@ private extension DashboardView {
                             RoundedRectangle(cornerRadius: 10)
                                 .fill(.black)
 
-                            Text("Invest".uppercased())
+                            Text("Invest 100€".uppercased())
                                 .foregroundColor(.white)
                                 .font(.custom("Nunito-Bold", size: 20))
                                 .padding(10)
