@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUICharts
 
 struct DashboardView: View {
     @StateObject private var store: DashboardStore
@@ -40,15 +41,64 @@ private extension DashboardView {
         case .loading:
             ProgressView()
         case .ready:
-            Text("DashboardView")
-            /* if let pizzas = store.state.data?.pizzas, pizzas.isNotEmpty {
-                 listView(for: pizzas)
-             } else {
-                 EmptyView(
-                     title: LocalizedString.marketListEmptyViewTitle(),
-                     description: LocalizedString.marketListEmptyViewDescription()
-                 )
-             } */
+            HStack {
+                Spacer()
+                Text("My Portfolio")
+                    .foregroundColor(.black)
+                    .font(.custom("Nunito-Bold", size: 20))
+                    .padding(.top, 15)
+                Spacer()
+            }
+
+            ScrollView {
+                VStack(alignment: .leading, spacing: 0) {
+                    Text("Value")
+                        .font(.custom("Nunito-Regular", size: 15))
+                        .foregroundColor(.gray)
+
+                    Text("5000$")
+                        .foregroundColor(.black)
+                        .font(.custom("Nunito-Bold", size: 40))
+                        .padding(.top, 3)
+
+                    Text("Investment: 4000$")
+                        .font(.custom("Nunito-Regular", size: 12))
+                        .foregroundColor(.gray)
+
+                    Text("Dividends: 1000$")
+                        .font(.custom("Nunito-Regular", size: 12))
+                        .foregroundColor(.gray)
+
+                    /* Text("Monthly dividend")
+                         .font(.custom("Nunito-Regular", size: 15))
+                         .foregroundColor(.gray)
+                         .padding(.top, 10)
+
+                     Text("5$")
+                         .foregroundColor(.black)
+                         .font(.custom("Nunito-Bold", size: 25))
+                         .padding(.top, 3) */
+
+                    Text("Prediction")
+                        .font(.custom("Nunito-Bold", size: 20))
+                        .foregroundColor(.black)
+                        .padding(.top, 50)
+
+                    LineView(
+                        data: [8, 9, 11, 13, 15, 18, 21, 25, 34],
+                        style: .init(
+                            backgroundColor: .clear,
+                            accentColor: .tint,
+                            gradientColor: .init(start: .tint, end: .yellow),
+                            textColor: .black,
+                            legendTextColor: .gray,
+                            dropShadowColor: .white
+                        )
+                    )
+                    .disabled(true)
+                }
+            }
+            .padding([.leading, .trailing], 24)
         }
     }
 }

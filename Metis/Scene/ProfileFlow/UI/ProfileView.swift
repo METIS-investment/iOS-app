@@ -43,44 +43,92 @@ private extension ProfileView {
         case .loading:
             ProgressView()
         case .ready:
-            VStack(alignment: .leading, spacing: 0) {
-                HStack {
-                    Spacer()
-                    Text("My Profile")
-                        .foregroundColor(.black)
-                        .font(.custom("Nunito-Bold", size: 20))
-                        .padding(.top, 15)
-                    Spacer()
-                }
-
-                Text(auth?.displayName ?? "Name")
-                    .font(.custom("Nunito-Bold", size: 25))
-                    .padding(.top, 30)
-
-                Text(auth?.email ?? "")
-                    .font(.custom("Nunito-Regular", size: 15))
-                    .foregroundColor(.gray)
-                    .padding(.top, 3)
-
-                Text("Card information")
-                    .font(.custom("Nunito-Bold", size: 20))
-                    .foregroundColor(.black)
-                    .padding(.top, 30)
-
+            HStack {
                 Spacer()
+                Text("My Profile")
+                    .foregroundColor(.black)
+                    .font(.custom("Nunito-Bold", size: 20))
+                    .padding(.top, 15)
+                Spacer()
+            }
 
-                HStack {
-                    Spacer()
-                    Button(action: {
-                        store.send(action: .didTapLogout)
-                    }, label: {
-                        Text("Logout")
-                            .font(.custom("Nunito-Regular", size: 15))
-                            .foregroundColor(.gray)
-                    })
-                    Spacer()
+            ScrollView {
+                VStack(alignment: .leading, spacing: 0) {
+                    HStack(alignment: .bottom) {
+                        Text(auth?.displayName ?? "Name")
+                            .font(.custom("Nunito-Bold", size: 25))
+
+                        Spacer()
+
+                        Button(action: {
+                            store.send(action: .didTapLogout)
+                        }, label: {
+                            Text("Logout")
+                                .font(.custom("Nunito-Regular", size: 12))
+                                .foregroundColor(.gray)
+                        })
+                        .offset(y: -5)
+                    }
+                    .padding(.top, 20)
+
+                    Text(auth?.email ?? "")
+                        .font(.custom("Nunito-Regular", size: 15))
+                        .foregroundColor(.gray)
+                        .padding(.top, 3)
+
+                    HStack {
+                        Text("Card information")
+                            .font(.custom("Nunito-Bold", size: 20))
+                            .foregroundColor(.black)
+
+                        Spacer()
+
+                        Button(action: {}, label: {
+                            Text("Remove")
+                                .font(.custom("Nunito-Regular", size: 12))
+                                .foregroundColor(.gray)
+                        })
+                    }
+                    .padding(.top, 50)
+
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(LinearGradient(colors: [Color(R.color.tintColor.name), Color(R.color.tintColor.name), .yellow], startPoint: .topLeading, endPoint: .bottomTrailing))
+                        .opacity(0.5)
+                        .frame(height: 200)
+                        .padding(.top, 15)
+                        .overlay {
+                            VStack(spacing: 0) {
+                                HStack {
+                                    Text("VISA")
+                                        .font(.custom("Nunito-Bold", size: 18))
+                                        .foregroundColor(.black)
+
+                                    Spacer()
+                                }
+                                .padding(.bottom, 100)
+
+                                Text("****  ****  ****  1234")
+                                    .font(.custom("Nunito-Bold", size: 20))
+                                    .foregroundColor(.black)
+                            }
+                            .padding(.leading, 20)
+                        }
+
+                    Text("Transaction History")
+                        .font(.custom("Nunito-Bold", size: 20))
+                        .foregroundColor(.black)
+                        .padding(.top, 50)
+
+                    Text("You are eligible to withdraw your money on \(auth?.metadata.creationDate?.addingTimeInterval(365 * 24 * 60 * 60) ?? Date().addingTimeInterval(365 * 24 * 60 * 60))")
+                        .font(.custom("Nunito-Regular", size: 15))
+                        .foregroundColor(.gray)
+                        .padding(.top, 3)
+
+                    Text("Get Help")
+                        .font(.custom("Nunito-Bold", size: 20))
+                        .foregroundColor(.black)
+                        .padding(.top, 50)
                 }
-                .padding(.bottom, 30)
             }
             .padding([.leading, .trailing], 24)
         }
