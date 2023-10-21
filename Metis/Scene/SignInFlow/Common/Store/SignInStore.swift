@@ -50,7 +50,7 @@ final class SignInStore: PublishingStore, ObservableObject {
                 .updating(\.status, with: .ready)
 
         case let .didTapSignIn(user):
-           //  signIn(user: user)
+            //  signIn(user: user)
             eventSubject.send(.finished)
 
         case .didFinishSignIn:
