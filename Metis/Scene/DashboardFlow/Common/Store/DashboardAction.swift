@@ -9,7 +9,7 @@ import Foundation
 
 enum DashboardAction {
     case viewDidLoad
-    case didReceiveData(data: DashboardViewData)
+    case didReceiveData(Double)
     case didReceiveError(error: Error)
     case didTapInvest
     case didFinishedOneTimeInvestment(value: Double)

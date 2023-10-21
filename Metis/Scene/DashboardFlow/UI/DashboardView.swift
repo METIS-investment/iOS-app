@@ -57,23 +57,23 @@ private extension DashboardView {
                         .foregroundColor(.gray)
 
                     HStack {
-                        Text("5000$")
+                        Text("\(Int(store.state.invested / 100))€")
                             .foregroundColor(.black)
                             .font(.custom("Nunito-Bold", size: 40))
 
                         Spacer()
 
-                        Text("+20%")
-                            .foregroundColor(.green)
+                        Text("+0%")
+                            .foregroundColor(.orange)
                             .font(.custom("Nunito-Bold", size: 40))
                     }
                     .padding(.top, 3)
 
-                    Text("Investment: 4000$")
+                    Text("Investment: \(Int(store.state.invested / 100))€")
                         .font(.custom("Nunito-Regular", size: 12))
                         .foregroundColor(.gray)
 
-                    Text("Dividends: 1000$")
+                    Text("Dividends: 0€")
                         .font(.custom("Nunito-Regular", size: 12))
                         .foregroundColor(.gray)
 

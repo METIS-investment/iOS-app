@@ -38,7 +38,7 @@ final class DashboardStore: PublishingStore, ObservableObject {
 
         case let .didReceiveData(data):
             state = state
-                .updating(\.data, with: data)
+                .updating(\.invested, with: data)
                 .updating(\.error, with: nil)
                 .updating(\.status, with: .ready)
 
@@ -51,8 +51,14 @@ final class DashboardStore: PublishingStore, ObservableObject {
             doOneTimeInvestment(value: 10000)
 
         case let .didFinishedOneTimeInvestment(value):
-            eventSubject.send(.showToast("You successfully invested \(value)$"))
-            // reload
+            eventSubject.send(.showToast("You successfully invested \(Int(value / 100))$"))
+
+            let investment = state.invested + value
+
+            state = state
+                .updating(\.invested, with: investment)
+                .updating(\.error, with: nil)
+                .updating(\.status, with: .ready)
         }
     }
 }
@@ -71,8 +77,7 @@ private extension DashboardStore {
     func fetchViewData() {
         Task { [weak self] in
             do {
-                let data = DashboardViewData()
-                self?.sendToMainActor(action: .didReceiveData(data: data))
+                self?.sendToMainActor(action: .didReceiveData(0))
             } catch {
                 self?.sendToMainActor(action: .didReceiveError(error: error))
             }

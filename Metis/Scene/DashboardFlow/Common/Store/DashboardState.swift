@@ -16,6 +16,6 @@ struct DashboardState: StoreState {
     static let initial = DashboardState()
 
     var status: Status = .loading
-    var data: DashboardViewData?
+    var invested: Double = 0
     var error: Error?
 }
