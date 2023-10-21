@@ -52,6 +52,7 @@ extension UserRouter: Requestable {
     }
 
     var headers: [String: String]? {
-        ["Authorization": "Bearer \(Constants.accessToken)"]
+        print("AAAXXX token: \(Constants.accessToken)")
+        return ["Authorization": "Bearer \(Constants.accessToken)"]
     }
 }

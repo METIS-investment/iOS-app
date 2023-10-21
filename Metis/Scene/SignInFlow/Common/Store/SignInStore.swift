@@ -85,7 +85,6 @@ private extension SignInStore {
             do {
                 try await userService.createUser(model: user)
                 try await userService.signUpUser()
-                self?.signIn2()
 
                 self?.sendToMainActor(action: .didFinishSignIn)
             } catch {

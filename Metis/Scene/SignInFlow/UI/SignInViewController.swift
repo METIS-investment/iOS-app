@@ -77,7 +77,7 @@ private extension SignInViewController {
                 self?.store.send(action: .didTapSignIn(.init(
                     first_name: user.profile?.givenName ?? "",
                     second_name: user.profile?.familyName ?? "",
-                    birthdate: "",
+                    birthdate: "2004-02-07 00:00:00.000000",
                     country: "",
                     street: "",
                     city: "",
