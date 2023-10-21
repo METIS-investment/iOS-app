@@ -8,5 +8,5 @@
 import DependencyInjection
 
 enum ServiceRegistration {
-    static func registerDependencies(to container: Container) {}
+    static func registerDependencies(to _: Container) {}
 }

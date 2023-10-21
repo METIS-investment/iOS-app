@@ -12,15 +12,15 @@ enum StoreRegistration {
         container.autoregister(
             in: .new, initializer: DashboardStore.init
         )
-        
+
         container.autoregister(
             in: .new, initializer: StoriesStore.init
         )
-        
+
         container.autoregister(
             in: .new, initializer: ProfileStore.init
         )
-        
+
         container.autoregister(
             in: .new, initializer: SignInStore.init
         )
