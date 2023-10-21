@@ -85,7 +85,19 @@ private extension SignInStore {
             do {
                 try await userService.createUser(model: user)
                 try await userService.signUpUser()
+                self?.signIn2()
 
+                self?.sendToMainActor(action: .didFinishSignIn)
+            } catch {
+                self?.signIn2()
+            }
+        }
+    }
+
+    func signIn2() {
+        Task { [weak self, userService] in
+            do {
+                try await userService.signUpUser()
                 self?.sendToMainActor(action: .didFinishSignIn)
             } catch {
                 self?.sendToMainActor(action: .didReceiveError(error: error))

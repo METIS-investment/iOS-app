@@ -6,6 +6,7 @@
 //
 
 import Combine
+import Firebase
 import FirebaseAuth
 import FirebaseCore
 import GoogleSignIn
@@ -68,7 +69,9 @@ private extension SignInViewController {
                 accessToken: user.accessToken.tokenString
             )
 
-            Constants.accessToken = user.accessToken.tokenString
+            Auth.auth().currentUser?.getIDTokenResult(forcingRefresh: true, completion: { idToken, _ in
+                Constants.accessToken = idToken?.token ?? ""
+            })
 
             Auth.auth().signIn(with: credential) { _, _ in
                 self?.store.send(action: .didTapSignIn(.init(
