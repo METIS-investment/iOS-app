@@ -98,7 +98,7 @@ private extension DashboardView {
                         .padding(.top, 40)
 
                     LineView(
-                        data: [8, 9, 11, 13, 15, 18, 21, 25, 34],
+                        data: [store.state.invested / 100, (store.state.invested / 100) * 1.05, (store.state.invested / 100) * 1.05 * 1.05],
                         style: .init(
                             backgroundColor: .clear,
                             accentColor: .tint,
