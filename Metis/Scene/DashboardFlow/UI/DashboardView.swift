@@ -52,40 +52,41 @@ private extension DashboardView {
 
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {
-                    HStack {
-                        Text("5000$")
-                            .foregroundColor(.black)
-                            .font(.custom("Nunito-Bold", size: 40))
+                    Text("Value")
+                        .font(.custom("Nunito-Regular", size: 15))
+                        .foregroundColor(.gray)
 
-                        Text("invested")
-                            .font(.custom("Nunito-Regular", size: 20))
-                            .foregroundColor(.black)
-                            .padding(.leading, 20)
+                    Text("5000$")
+                        .foregroundColor(.black)
+                        .font(.custom("Nunito-Bold", size: 40))
+                        .padding(.top, 3)
 
-                        Spacer()
-                    }
-                    .padding(.top, 20)
+                    /* Text("Monthly dividend")
+                         .font(.custom("Nunito-Regular", size: 15))
+                         .foregroundColor(.gray)
+                         .padding(.top, 10)
 
-                    HStack {
-                        Text("5$")
-                            .foregroundColor(.black)
-                            .font(.custom("Nunito-Bold", size: 25))
-
-                        Text("monthly dividend")
-                            .font(.custom("Nunito-Regular", size: 20))
-                            .foregroundColor(.black)
-                            .padding(.leading, 20)
-
-                        Spacer()
-                    }
-                    .padding(.top, 10)
+                     Text("5$")
+                         .foregroundColor(.black)
+                         .font(.custom("Nunito-Bold", size: 25))
+                         .padding(.top, 3) */
 
                     Text("Prediction")
                         .font(.custom("Nunito-Bold", size: 20))
                         .foregroundColor(.black)
                         .padding(.top, 50)
 
-                    LineView(data: [8, 23, 54, 32, 12, 37, 7, 23, 43], style: .init(backgroundColor: .clear, accentColor: .tint, gradientColor: .init(start: .tint, end: .yellow), textColor: .black, legendTextColor: .gray, dropShadowColor: .white))
+                    LineView(
+                        data: [8, 9, 11, 13, 15, 18, 21, 25, 34],
+                        style: .init(
+                            backgroundColor: .clear,
+                            accentColor: .tint,
+                            gradientColor: .init(start: .tint, end: .yellow),
+                            textColor: .black,
+                            legendTextColor: .gray,
+                            dropShadowColor: .white
+                        )
+                    )
                 }
             }
             .padding([.leading, .trailing], 24)

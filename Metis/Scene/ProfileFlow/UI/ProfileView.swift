@@ -119,7 +119,7 @@ private extension ProfileView {
                         .foregroundColor(.black)
                         .padding(.top, 50)
 
-                    Text("You can withdraw money on \(auth?.metadata.creationDate?.addingTimeInterval(365 * 24 * 60 * 60) ?? Date().addingTimeInterval(365 * 24 * 60 * 60))")
+                    Text("You are eligible to withdraw your money on \(auth?.metadata.creationDate?.addingTimeInterval(365 * 24 * 60 * 60) ?? Date().addingTimeInterval(365 * 24 * 60 * 60))")
                         .font(.custom("Nunito-Regular", size: 15))
                         .foregroundColor(.gray)
                         .padding(.top, 3)
