@@ -237,7 +237,9 @@ struct _R {
             let bundle: Foundation.Bundle
 
             let name = "SignInViewController"
-            func validate() throws {}
+            func validate() throws {
+                if UIKit.UIColor(named: "tintColor", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'tintColor' is used in storyboard 'SignInViewController', but couldn't be loaded.") }
+            }
         }
     }
 }

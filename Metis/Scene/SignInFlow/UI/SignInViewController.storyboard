@@ -25,13 +25,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfZ-4V-TlR">
-                                <rect key="frame" x="158.66666666666666" y="235.66666666666666" width="76" height="36.333333333333343"/>
+                                <rect key="frame" x="158.66666666666666" y="285.66666666666669" width="76" height="36.333333333333314"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="31"/>
                                 <color key="textColor" name="tintColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elevating Growth, Empowering Tomorrow" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WI-HJ-J6Q">
-                                <rect key="frame" x="40.333333333333343" y="297" width="312.66666666666663" height="20.333333333333314"/>
+                                <rect key="frame" x="40.333333333333343" y="332" width="312.66666666666663" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -41,8 +41,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mie-bm-2ck" secondAttribute="trailing" constant="32" id="0FW-vY-A15"/>
-                            <constraint firstItem="mie-bm-2ck" firstAttribute="top" secondItem="JfZ-4V-TlR" secondAttribute="bottom" constant="130" id="0tb-tE-kvj"/>
-                            <constraint firstItem="8WI-HJ-J6Q" firstAttribute="top" secondItem="JfZ-4V-TlR" secondAttribute="bottom" constant="25" id="Nee-47-jDn"/>
+                            <constraint firstItem="mie-bm-2ck" firstAttribute="top" secondItem="JfZ-4V-TlR" secondAttribute="bottom" constant="80" id="0tb-tE-kvj"/>
+                            <constraint firstItem="8WI-HJ-J6Q" firstAttribute="top" secondItem="JfZ-4V-TlR" secondAttribute="bottom" constant="10" id="Nee-47-jDn"/>
                             <constraint firstItem="mie-bm-2ck" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="YxU-2N-hbB"/>
                             <constraint firstItem="mie-bm-2ck" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="anY-eF-g29"/>
                             <constraint firstItem="JfZ-4V-TlR" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="bHz-7D-yam"/>
@@ -51,7 +51,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="descriptionLabel" destination="8WI-HJ-J6Q" id="dhq-KH-Jnt"/>
                         <outlet property="signInButton" destination="mie-bm-2ck" id="vR9-yc-6JI"/>
+                        <outlet property="titleLabel" destination="JfZ-4V-TlR" id="9ht-26-img"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
