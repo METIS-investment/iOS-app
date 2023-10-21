@@ -14,5 +14,11 @@ enum ServiceRegistration {
             in: .shared,
             initializer: InvestService.init(apiManager:)
         )
+
+        container.autoregister(
+            type: UserServicing.self,
+            in: .shared,
+            initializer: UserService.init(apiManager:)
+        )
     }
 }

@@ -20,8 +20,10 @@ extension InvestRouter: Requestable {
 
     var path: String {
         switch self {
-        case .postInvestment, .postRecurringInvetment:
-            return "post"
+        case .postInvestment:
+            return "one-time-investment"
+        case .postRecurringInvetment:
+            return "recurring-investment"
         }
     }
 
