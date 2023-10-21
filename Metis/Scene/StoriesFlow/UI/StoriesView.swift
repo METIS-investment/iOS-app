@@ -71,10 +71,12 @@ private extension StoriesView {
             VStack(alignment: .leading) {
                 Text(title)
                     .font(.custom("Nunito-Bold", size: 20))
-                    .padding(.bottom, 5)
+                    .padding(.bottom, 2)
 
                 Text(description)
-                    .font(.custom("Nunito-Regular", size: 18))
+                    .font(.custom("Nunito-Regular", size: 16))
+                    .foregroundColor(.gray)
+                    .lineLimit(0)
             }
             .padding(.leading, 15)
 
