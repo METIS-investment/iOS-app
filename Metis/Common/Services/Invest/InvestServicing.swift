@@ -10,4 +10,6 @@ import Foundation
 protocol InvestServicing {
     func investOneTime(model: InvestValueModel) async throws
     func investReccuring(model: RecurringInvestValueModel) async throws
+    func setupPayment() async throws
+    func isUserBillable() async throws
 }

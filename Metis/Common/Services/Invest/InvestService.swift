@@ -21,4 +21,12 @@ final class InvestService: InvestServicing {
     func investOneTime(model: InvestValueModel) async throws {
         try await apiManager.request(InvestRouter.postInvestment(model))
     }
+
+    func setupPayment() async throws {
+        try await apiManager.request(InvestRouter.postPayment(.init()))
+    }
+
+    func isUserBillable() async throws {
+        try await apiManager.request(InvestRouter.isBillable)
+    }
 }

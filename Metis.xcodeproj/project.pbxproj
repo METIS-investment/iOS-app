@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA2F035A2AE4431A00B2D3D4 /* PaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2F03592AE4431A00B2D3D4 /* PaymentModel.swift */; };
 		CA37A8642AE29099008D0A4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37A8632AE29099008D0A4A /* AppDelegate.swift */; };
 		CA37A8662AE29099008D0A4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37A8652AE29099008D0A4A /* SceneDelegate.swift */; };
 		CA37A86D2AE2909A008D0A4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA37A86C2AE2909A008D0A4A /* Assets.xcassets */; };
@@ -142,6 +143,7 @@
 		43A8B312CE9A34E1D68F53AB /* Pods_defaults_Metis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_defaults_Metis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF301BBE3F8D887F512323C /* Pods-defaults-Metis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-defaults-Metis.release.xcconfig"; path = "Target Support Files/Pods-defaults-Metis/Pods-defaults-Metis.release.xcconfig"; sourceTree = "<group>"; };
 		C3788AA75042DB866C7E1FA3 /* Pods-defaults-Metis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-defaults-Metis.debug.xcconfig"; path = "Target Support Files/Pods-defaults-Metis/Pods-defaults-Metis.debug.xcconfig"; sourceTree = "<group>"; };
+		CA2F03592AE4431A00B2D3D4 /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
 		CA37A8602AE29099008D0A4A /* Metis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA37A8632AE29099008D0A4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA37A8652AE29099008D0A4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -776,6 +778,7 @@
 				CA9EB1402AE3EC7900E300D7 /* InvestValueModel.swift */,
 				CA9EB1422AE3ECB900E300D7 /* RecurringInvestValueModel.swift */,
 				CA9EB14C2AE3FCFD00E300D7 /* User.swift */,
+				CA2F03592AE4431A00B2D3D4 /* PaymentModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1069,6 +1072,7 @@
 				CA37A8D72AE29A2A008D0A4A /* Font+AppFonts.swift in Sources */,
 				CA37A9172AE29C57008D0A4A /* DashboardAction.swift in Sources */,
 				CA37A8EF2AE29A2A008D0A4A /* Configuration.swift in Sources */,
+				CA2F035A2AE4431A00B2D3D4 /* PaymentModel.swift in Sources */,
 				CA37A8E62AE29A2A008D0A4A /* ActiveScene.swift in Sources */,
 				CA7E50FD2AE2C05900D4BD71 /* ProfileViewData.swift in Sources */,
 				CA9EB1302AE3E81200E300D7 /* InitialSceneCoordinator.swift in Sources */,

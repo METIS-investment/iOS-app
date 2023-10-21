@@ -11,6 +11,8 @@ import Networking
 enum InvestRouter {
     case postInvestment(InvestValueModel)
     case postRecurringInvetment(RecurringInvestValueModel)
+    case postPayment(PaymentModel)
+    case isBillable
 }
 
 extension InvestRouter: Requestable {
@@ -24,13 +26,19 @@ extension InvestRouter: Requestable {
             return "one-time-investment"
         case .postRecurringInvetment:
             return "recurring-investment"
+        case .postPayment:
+            return "payment_method"
+        case .isBillable:
+            return "investment"
         }
     }
 
     var method: HTTPMethod {
         switch self {
-        case .postInvestment, .postRecurringInvetment:
+        case .postInvestment, .postRecurringInvetment, .postPayment:
             return .post
+        case .isBillable:
+            return .get
         }
     }
 
@@ -40,6 +48,15 @@ extension InvestRouter: Requestable {
             return .encodable(model)
         case let .postRecurringInvetment(model):
             return .encodable(model)
+        case let .postPayment(model):
+            return .encodable(model)
+        case .isBillable:
+            return nil
         }
+    }
+
+    var headers: [String: String]? {
+        print("AAAXXX token: \(Constants.accessToken)")
+        return ["Authorization": "Bearer \(Constants.accessToken)"]
     }
 }

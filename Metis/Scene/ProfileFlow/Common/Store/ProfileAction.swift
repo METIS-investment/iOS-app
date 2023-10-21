@@ -9,8 +9,9 @@ import Foundation
 
 enum ProfileAction {
     case viewDidLoad
-    case didReceiveData(data: ProfileViewData)
+    case didReceiveData(isBillable: Bool)
     case didReceiveError(error: Error)
     case didTapLogout
     case didFinishLogout
+    case didTapAddCard
 }
