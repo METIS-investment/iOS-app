@@ -83,7 +83,9 @@ private extension ProfileView {
 
                         Spacer()
 
-                        Button(action: {}, label: {
+                        Button(action: {
+                            store.send(action: .didTapRemoveCard)
+                        }, label: {
                             Text("Remove")
                                 .font(.custom("Nunito-Regular", size: 12))
                                 .foregroundColor(.gray)

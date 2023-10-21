@@ -56,6 +56,12 @@ final class ProfileStore: PublishingStore, ObservableObject {
 
         case .didTapAddCard:
             addCard()
+
+        case .didTapRemoveCard:
+            state = state
+                .updating(\.isBillable, with: false)
+                .updating(\.error, with: nil)
+                .updating(\.status, with: .ready)
         }
     }
 }

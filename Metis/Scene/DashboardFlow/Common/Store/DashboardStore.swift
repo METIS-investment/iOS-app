@@ -48,7 +48,7 @@ final class DashboardStore: PublishingStore, ObservableObject {
                 .updating(\.status, with: .ready)
 
         case .didTapInvest:
-            doOneTimeInvestment(value: 100)
+            doOneTimeInvestment(value: 10000)
 
         case let .didFinishedOneTimeInvestment(value):
             eventSubject.send(.showToast("You successfully invested \(value)$"))
@@ -79,6 +79,7 @@ private extension DashboardStore {
         }
     }
 
+    // cents
     func doOneTimeInvestment(value: Double) {
         Task { [weak self, investService] in
             do {

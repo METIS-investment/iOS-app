@@ -14,4 +14,5 @@ enum ProfileAction {
     case didTapLogout
     case didFinishLogout
     case didTapAddCard
+    case didTapRemoveCard
 }
