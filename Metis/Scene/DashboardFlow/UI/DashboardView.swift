@@ -61,6 +61,14 @@ private extension DashboardView {
                         .font(.custom("Nunito-Bold", size: 40))
                         .padding(.top, 3)
 
+                    Text("Investment: 4000$")
+                        .font(.custom("Nunito-Regular", size: 12))
+                        .foregroundColor(.gray)
+
+                    Text("Dividends: 1000$")
+                        .font(.custom("Nunito-Regular", size: 12))
+                        .foregroundColor(.gray)
+
                     /* Text("Monthly dividend")
                          .font(.custom("Nunito-Regular", size: 15))
                          .foregroundColor(.gray)

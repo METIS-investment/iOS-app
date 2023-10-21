@@ -15,7 +15,7 @@ final class SignInViewController: ReactiveViewController, StoreContaining {
     // MARK: - UI Components
 
     @IBOutlet private var signInButton: GIDSignInButton!
-
+    //@IBOutlet private var jojo
     // MARK: - Public Properties
 
     // swiftlint:disable:next implicitly_unwrapped_optional
