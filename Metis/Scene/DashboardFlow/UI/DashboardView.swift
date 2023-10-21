@@ -92,7 +92,7 @@ private extension DashboardView {
                     })
                     .padding(.top, 20)
 
-                    Text("Prediction")
+                    Text("Expected earnings")
                         .font(.custom("Nunito-Bold", size: 20))
                         .foregroundColor(.black)
                         .padding(.top, 40)
@@ -102,7 +102,7 @@ private extension DashboardView {
                         style: .init(
                             backgroundColor: .clear,
                             accentColor: .tint,
-                            gradientColor: .init(start: .tint, end: .yellow),
+                            gradientColor: .init(start: .tint, end: .green),
                             textColor: .black,
                             legendTextColor: .gray,
                             dropShadowColor: .white
