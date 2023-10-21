@@ -98,12 +98,15 @@ struct _R {
         }
     }
 
-    /// This `_R.color` struct is generated, and contains static references to 1 colors.
+    /// This `_R.color` struct is generated, and contains static references to 2 colors.
     struct color {
         let bundle: Foundation.Bundle
 
         /// Color `AccentColor`.
         var accentColor: RswiftResources.ColorResource { .init(name: "AccentColor", path: [], bundle: bundle) }
+
+        /// Color `tintColor`.
+        var tintColor: RswiftResources.ColorResource { .init(name: "tintColor", path: [], bundle: bundle) }
     }
 
     /// This `_R.info` struct is generated, and contains static references to 1 properties.

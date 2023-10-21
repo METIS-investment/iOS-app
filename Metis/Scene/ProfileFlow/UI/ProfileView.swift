@@ -78,7 +78,7 @@ private extension ProfileView {
                 .padding(.top, 50)
 
                 RoundedRectangle(cornerRadius: 20)
-                    .fill(LinearGradient(colors: [.blue, .blue, .yellow], startPoint: .topLeading, endPoint: .bottomTrailing))
+                    .fill(LinearGradient(colors: [Color(R.color.tintColor.name), Color(R.color.tintColor.name), .yellow], startPoint: .topLeading, endPoint: .bottomTrailing))
                     .opacity(0.5)
                     .frame(height: 200)
                     .padding(.top, 15)

@@ -31,6 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 private extension SceneDelegate {
     func setupInitialScene(with windowScene: UIWindowScene) {
         let window = UIWindow(windowScene: windowScene)
+        window.tintColor = R.color.tintColor()
         self.window = window
 
         coordinator = appCoordinator.didLaunchScene(windowScene, window: window)
