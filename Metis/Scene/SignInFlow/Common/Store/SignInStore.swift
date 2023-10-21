@@ -21,6 +21,11 @@ final class SignInStore: PublishingStore, ObservableObject {
     // MARK: - Private properties
 
     private let eventSubject: PassthroughSubject<SignInViewEvent, Never> = .init()
+    private let userService: UserServicing
+
+    init(userService: UserServicing) {
+        self.userService = userService
+    }
 
     // MARK: - Store methods
 
@@ -43,6 +48,9 @@ final class SignInStore: PublishingStore, ObservableObject {
             state = state
                 .updating(\.error, with: error)
                 .updating(\.status, with: .ready)
+
+        case let .didTapSignIn(user):
+            signIn(user: user)
 
         case .didFinishSignIn:
             eventSubject.send(.finished)
@@ -72,5 +80,16 @@ private extension SignInStore {
         }
     }
 
-    func signIn() {}
+    func signIn(user: User) {
+        Task { [weak self, userService] in
+            do {
+                try await userService.createUser(model: user)
+                try await userService.signUpUser()
+
+                self?.sendToMainActor(action: .didFinishSignIn)
+            } catch {
+                self?.sendToMainActor(action: .didReceiveError(error: error))
+            }
+        }
+    }
 }

@@ -10,7 +10,7 @@ import Foundation
 struct User: Codable {
     let firstName: String
     let secondName: String
-    let birthdate: Date // maybe string
+    let birthdate: String
     let country: String
     let street: String
     let city: String

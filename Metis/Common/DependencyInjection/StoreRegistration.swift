@@ -22,7 +22,7 @@ enum StoreRegistration {
         )
 
         container.autoregister(
-            in: .new, initializer: SignInStore.init
+            in: .new, initializer: SignInStore.init(userService:)
         )
     }
 }

@@ -65,7 +65,15 @@ private extension SignInViewController {
             )
 
             Auth.auth().signIn(with: credential) { _, _ in
-                self?.store.send(action: .didFinishSignIn)
+                self?.store.send(action: .didTapSignIn(.init(
+                    firstName: user.profile?.givenName ?? "",
+                    secondName: user.profile?.familyName ?? "",
+                    birthdate: "",
+                    country: "",
+                    street: "",
+                    city: "",
+                    zipCode: 100_000
+                )))
             }
         }
     }
