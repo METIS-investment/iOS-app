@@ -62,10 +62,43 @@ private extension ProfileView {
                     .foregroundColor(.gray)
                     .padding(.top, 3)
 
-                Text("Card information")
-                    .font(.custom("Nunito-Bold", size: 20))
-                    .foregroundColor(.black)
-                    .padding(.top, 30)
+                HStack {
+                    Text("Card information")
+                        .font(.custom("Nunito-Bold", size: 20))
+                        .foregroundColor(.black)
+
+                    Spacer()
+
+                    Button(action: {}, label: {
+                        Text("Remove")
+                            .font(.custom("Nunito-Regular", size: 15))
+                            .foregroundColor(.gray)
+                    })
+                }
+                .padding(.top, 50)
+
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(LinearGradient(colors: [.blue, .blue, .yellow], startPoint: .topLeading, endPoint: .bottomTrailing))
+                    .opacity(0.5)
+                    .frame(height: 200)
+                    .padding(.top, 15)
+                    .overlay {
+                        VStack(spacing: 0) {
+                            HStack {
+                                Text("VISA")
+                                    .font(.custom("Nunito-Bold", size: 18))
+                                    .foregroundColor(.black)
+
+                                Spacer()
+                            }
+                            .padding(.bottom, 100)
+
+                            Text("****  ****  ****  1234")
+                                .font(.custom("Nunito-Bold", size: 20))
+                                .foregroundColor(.black)
+                        }
+                        .padding(.leading, 20)
+                    }
 
                 Spacer()
 
