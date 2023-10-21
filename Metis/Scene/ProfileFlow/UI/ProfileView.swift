@@ -82,7 +82,7 @@ private extension ProfileView {
                             .foregroundColor(.black)
 
                         Spacer()
-                        
+
                         if store.state.isBillable {
                             Button(action: {
                                 store.send(action: .didTapRemoveCard)
@@ -112,7 +112,7 @@ private extension ProfileView {
                                     }
                                     .padding(.bottom, 100)
 
-                                    Text("****  ****  ****  1234")
+                                    Text("****  ****  ****  4790")
                                         .font(.custom("Nunito-Bold", size: 20))
                                         .foregroundColor(.black)
                                 }
