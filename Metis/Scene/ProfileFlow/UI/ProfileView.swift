@@ -5,10 +5,13 @@
 //  Created by Veronika Zelinkova on 20.10.2023.
 //
 
+import FirebaseAuth
 import SwiftUI
 
 struct ProfileView: View {
     @StateObject private var store: ProfileStore
+
+    private let auth = Auth.auth().currentUser
 
     init(store: ProfileStore) {
         _store = .init(wrappedValue: store)
@@ -40,15 +43,46 @@ private extension ProfileView {
         case .loading:
             ProgressView()
         case .ready:
-            Text("ProfileView")
-            /* if let pizzas = store.state.data?.pizzas, pizzas.isNotEmpty {
-                 listView(for: pizzas)
-             } else {
-                 EmptyView(
-                     title: LocalizedString.marketListEmptyViewTitle(),
-                     description: LocalizedString.marketListEmptyViewDescription()
-                 )
-             } */
+            VStack(alignment: .leading, spacing: 0) {
+                HStack {
+                    Spacer()
+                    Text("My Profile")
+                        .foregroundColor(.black)
+                        .font(.custom("Nunito-Bold", size: 20))
+                        .padding(.top, 15)
+                    Spacer()
+                }
+
+                Text(auth?.displayName ?? "Name")
+                    .font(.custom("Nunito-Bold", size: 25))
+                    .padding(.top, 30)
+
+                Text(auth?.email ?? "")
+                    .font(.custom("Nunito-Regular", size: 15))
+                    .foregroundColor(.gray)
+                    .padding(.top, 3)
+
+                Text("Card information")
+                    .font(.custom("Nunito-Bold", size: 20))
+                    .foregroundColor(.black)
+                    .padding(.top, 30)
+
+                Spacer()
+
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        store.send(action: .didTapLogout)
+                    }, label: {
+                        Text("Logout")
+                            .font(.custom("Nunito-Regular", size: 15))
+                            .foregroundColor(.gray)
+                    })
+                    Spacer()
+                }
+                .padding(.bottom, 30)
+            }
+            .padding([.leading, .trailing], 24)
         }
     }
 }

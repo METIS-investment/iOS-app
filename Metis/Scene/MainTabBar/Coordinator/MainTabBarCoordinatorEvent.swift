@@ -5,4 +5,6 @@
 //  Created by Veronika Zelinkova on 20.10.2023.
 //
 
-enum MainTabBarCoordinatorEvent {}
+enum MainTabBarCoordinatorEvent {
+    case logout
+}

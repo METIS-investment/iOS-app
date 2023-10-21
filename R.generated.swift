@@ -15,6 +15,7 @@ struct _R {
     var string: string { .init(bundle: bundle, preferredLanguages: nil, locale: nil) }
     var color: color { .init(bundle: bundle) }
     var info: info { .init(bundle: bundle) }
+    var font: font { .init(bundle: bundle) }
     var file: file { .init(bundle: bundle) }
     var storyboard: storyboard { .init(bundle: bundle) }
 
@@ -38,6 +39,10 @@ struct _R {
         .init(bundle: bundle)
     }
 
+    func font(bundle: Foundation.Bundle) -> font {
+        .init(bundle: bundle)
+    }
+
     func file(bundle: Foundation.Bundle) -> file {
         .init(bundle: bundle)
     }
@@ -47,6 +52,7 @@ struct _R {
     }
 
     func validate() throws {
+        try font.validate()
         try storyboard.validate()
     }
 
@@ -148,7 +154,31 @@ struct _R {
         }
     }
 
-    /// This `_R.file` struct is generated, and contains static references to 2 resource files.
+    /// This `_R.font` struct is generated, and contains static references to 3 fonts.
+    struct font: Sequence {
+        let bundle: Foundation.Bundle
+
+        /// Font `Nunito-Bold`.
+        var nunitoBold: RswiftResources.FontResource { .init(name: "Nunito-Bold", bundle: bundle, filename: "Nunito-Bold.ttf") }
+
+        /// Font `Nunito-Regular`.
+        var nunitoRegular: RswiftResources.FontResource { .init(name: "Nunito-Regular", bundle: bundle, filename: "Nunito-Regular.ttf") }
+
+        /// Font `Nunito-SemiBold`.
+        var nunitoSemiBold: RswiftResources.FontResource { .init(name: "Nunito-SemiBold", bundle: bundle, filename: "Nunito-SemiBold.ttf") }
+
+        func makeIterator() -> IndexingIterator<[RswiftResources.FontResource]> {
+            [nunitoBold, nunitoRegular, nunitoSemiBold].makeIterator()
+        }
+
+        func validate() throws {
+            for font in self {
+                if !font.canBeLoaded() { throw RswiftResources.ValidationError("[R.swift] Font '\(font.name)' could not be loaded, is '\(font.filename)' added to the UIAppFonts array in this targets Info.plist?") }
+            }
+        }
+    }
+
+    /// This `_R.file` struct is generated, and contains static references to 5 resource files.
     struct file {
         let bundle: Foundation.Bundle
 
@@ -157,6 +187,15 @@ struct _R {
 
         /// Resource file `GoogleService-Info.plist`.
         var googleServiceInfoPlist: RswiftResources.FileResource { .init(name: "GoogleService-Info", pathExtension: "plist", bundle: bundle, locale: LocaleReference.none) }
+
+        /// Resource file `Nunito-Bold.ttf`.
+        var nunitoBoldTtf: RswiftResources.FileResource { .init(name: "Nunito-Bold", pathExtension: "ttf", bundle: bundle, locale: LocaleReference.none) }
+
+        /// Resource file `Nunito-Regular.ttf`.
+        var nunitoRegularTtf: RswiftResources.FileResource { .init(name: "Nunito-Regular", pathExtension: "ttf", bundle: bundle, locale: LocaleReference.none) }
+
+        /// Resource file `Nunito-SemiBold.ttf`.
+        var nunitoSemiBoldTtf: RswiftResources.FileResource { .init(name: "Nunito-SemiBold", pathExtension: "ttf", bundle: bundle, locale: LocaleReference.none) }
     }
 
     /// This `_R.storyboard` struct is generated, and contains static references to 2 storyboards.

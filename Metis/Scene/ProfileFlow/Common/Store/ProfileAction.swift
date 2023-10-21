@@ -11,4 +11,6 @@ enum ProfileAction {
     case viewDidLoad
     case didReceiveData(data: ProfileViewData)
     case didReceiveError(error: Error)
+    case didTapLogout
+    case didFinishLogout
 }

@@ -7,4 +7,6 @@
 
 import Foundation
 
-enum ProfileViewEvent {}
+enum ProfileViewEvent {
+    case logout
+}

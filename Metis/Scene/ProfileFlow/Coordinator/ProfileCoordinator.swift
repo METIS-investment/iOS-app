@@ -64,5 +64,10 @@ extension ProfileCoordinator {
 // MARK: - Handle events
 
 private extension ProfileCoordinator {
-    func handle(event _: ProfileViewEvent) {}
+    func handle(event: ProfileViewEvent) {
+        switch event {
+        case .logout:
+            eventSubject.send(.logout)
+        }
+    }
 }

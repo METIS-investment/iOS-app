@@ -7,4 +7,6 @@
 
 import Foundation
 
-enum ProfileCoordinatorEvent {}
+enum ProfileCoordinatorEvent {
+    case logout
+}
