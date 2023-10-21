@@ -118,6 +118,16 @@ private extension ProfileView {
                         .font(.custom("Nunito-Bold", size: 20))
                         .foregroundColor(.black)
                         .padding(.top, 50)
+
+                    Text("You can withdraw money on \(auth?.metadata.creationDate?.addingTimeInterval(365 * 24 * 60 * 60) ?? Date().addingTimeInterval(365 * 24 * 60 * 60))")
+                        .font(.custom("Nunito-Regular", size: 15))
+                        .foregroundColor(.gray)
+                        .padding(.top, 3)
+
+                    Text("Get Help")
+                        .font(.custom("Nunito-Bold", size: 20))
+                        .foregroundColor(.black)
+                        .padding(.top, 50)
                 }
                 .padding([.leading, .trailing], 24)
             }
