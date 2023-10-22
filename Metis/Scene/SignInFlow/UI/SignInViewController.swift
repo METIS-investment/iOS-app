@@ -6,10 +6,15 @@
 //
 
 import Combine
+import Firebase
 import FirebaseAuth
 import FirebaseCore
 import GoogleSignIn
 import UIKit
+
+enum Constants {
+    static var accessToken: String = ""
+}
 
 final class SignInViewController: ReactiveViewController, StoreContaining {
     // MARK: - UI Components
@@ -64,8 +69,20 @@ private extension SignInViewController {
                 accessToken: user.accessToken.tokenString
             )
 
+            Auth.auth().currentUser?.getIDTokenResult(forcingRefresh: true, completion: { idToken, _ in
+                Constants.accessToken = idToken?.token ?? ""
+            })
+
             Auth.auth().signIn(with: credential) { _, _ in
-                self?.store.send(action: .didFinishSignIn)
+                self?.store.send(action: .didTapSignIn(.init(
+                    first_name: user.profile?.givenName ?? "",
+                    second_name: user.profile?.familyName ?? "",
+                    birthdate: "2004-02-07 00:00:00.000000",
+                    country: "",
+                    street: "",
+                    city: "",
+                    zip_code: 10000
+                )))
             }
         }
     }

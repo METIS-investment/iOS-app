@@ -20,6 +20,11 @@ final class ProfileStore: PublishingStore, ObservableObject {
     // MARK: - Private properties
 
     private let eventSubject: PassthroughSubject<ProfileViewEvent, Never> = .init()
+    private let investService: InvestServicing
+
+    init(investService: InvestServicing) {
+        self.investService = investService
+    }
 
     // MARK: - Store methods
 
@@ -34,7 +39,7 @@ final class ProfileStore: PublishingStore, ObservableObject {
 
         case let .didReceiveData(data):
             state = state
-                .updating(\.data, with: data)
+                .updating(\.isBillable, with: data)
                 .updating(\.error, with: nil)
                 .updating(\.status, with: .ready)
 
@@ -48,6 +53,15 @@ final class ProfileStore: PublishingStore, ObservableObject {
 
         case .didFinishLogout:
             eventSubject.send(.logout)
+
+        case .didTapAddCard:
+            addCard()
+
+        case .didTapRemoveCard:
+            state = state
+                .updating(\.isBillable, with: false)
+                .updating(\.error, with: nil)
+                .updating(\.status, with: .ready)
         }
     }
 }
@@ -75,12 +89,23 @@ private extension ProfileStore {
     }
 
     func fetchViewData() {
-        Task { [weak self] in
+        Task { [weak self, investService] in
             do {
-                let data = ProfileViewData()
-                self?.sendToMainActor(action: .didReceiveData(data: data))
+                try await investService.isUserBillable()
+                self?.sendToMainActor(action: .didReceiveData(isBillable: true))
             } catch {
-                self?.sendToMainActor(action: .didReceiveError(error: error))
+                self?.sendToMainActor(action: .didReceiveData(isBillable: false))
+            }
+        }
+    }
+
+    func addCard() {
+        Task { [weak self, investService] in
+            do {
+                try await investService.setupPayment()
+                self?.sendToMainActor(action: .didReceiveData(isBillable: true))
+            } catch {
+                self?.sendToMainActor(action: .didReceiveData(isBillable: false))
             }
         }
     }

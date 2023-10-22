@@ -64,5 +64,10 @@ extension DashboardCoordinator {
 // MARK: - Handle events
 
 private extension DashboardCoordinator {
-    func handle(event _: DashboardViewEvent) {}
+    func handle(event: DashboardViewEvent) {
+        switch event {
+        case let .showToast(message):
+            rootViewController.showToast(message: message)
+        }
+    }
 }

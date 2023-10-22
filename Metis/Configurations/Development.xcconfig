@@ -11,4 +11,4 @@
 APP_BUNDLE_NAME = Metis
 APP_BUNDLE_IDENTIFIER = com.metis-investment
 
-API_BASE_URL = http:/$()/httpbin.org/
+API_BASE_URL = https:/$()/api.metis-investment.com/

@@ -16,6 +16,6 @@ struct ProfileState: StoreState {
     static let initial = ProfileState()
 
     var status: Status = .loading
-    var data: ProfileViewData?
+    var isBillable = false
     var error: Error?
 }

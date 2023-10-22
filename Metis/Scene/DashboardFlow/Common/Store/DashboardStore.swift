@@ -19,6 +19,11 @@ final class DashboardStore: PublishingStore, ObservableObject {
     // MARK: - Private properties
 
     private let eventSubject: PassthroughSubject<DashboardViewEvent, Never> = .init()
+    private let investService: InvestServicing
+
+    init(investService: InvestServicing) {
+        self.investService = investService
+    }
 
     // MARK: - Store methods
 
@@ -33,13 +38,26 @@ final class DashboardStore: PublishingStore, ObservableObject {
 
         case let .didReceiveData(data):
             state = state
-                .updating(\.data, with: data)
+                .updating(\.invested, with: data)
                 .updating(\.error, with: nil)
                 .updating(\.status, with: .ready)
 
         case let .didReceiveError(error):
             state = state
                 .updating(\.error, with: error)
+                .updating(\.status, with: .ready)
+
+        case .didTapInvest:
+            doOneTimeInvestment(value: 10000)
+
+        case let .didFinishedOneTimeInvestment(value):
+            eventSubject.send(.showToast("You successfully invested \(Int(value / 100))€"))
+
+            let investment = state.invested + value
+
+            state = state
+                .updating(\.invested, with: investment)
+                .updating(\.error, with: nil)
                 .updating(\.status, with: .ready)
         }
     }
@@ -59,8 +77,20 @@ private extension DashboardStore {
     func fetchViewData() {
         Task { [weak self] in
             do {
-                let data = DashboardViewData()
-                self?.sendToMainActor(action: .didReceiveData(data: data))
+                self?.sendToMainActor(action: .didReceiveData(0))
+            } catch {
+                self?.sendToMainActor(action: .didReceiveError(error: error))
+            }
+        }
+    }
+
+    // cents
+    func doOneTimeInvestment(value: Double) {
+        Task { [weak self, investService] in
+            do {
+                let model = InvestValueModel(value: value)
+                try await investService.investOneTime(model: model)
+                self?.sendToMainActor(action: .didFinishedOneTimeInvestment(value: value))
             } catch {
                 self?.sendToMainActor(action: .didReceiveError(error: error))
             }

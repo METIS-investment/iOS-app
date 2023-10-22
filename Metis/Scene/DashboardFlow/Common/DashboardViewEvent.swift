@@ -7,4 +7,6 @@
 
 import Foundation
 
-enum DashboardViewEvent {}
+enum DashboardViewEvent {
+    case showToast(String)
+}

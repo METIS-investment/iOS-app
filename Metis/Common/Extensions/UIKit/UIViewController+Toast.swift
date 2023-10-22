@@ -11,15 +11,15 @@ extension UIViewController {
     func showToast(message: String, duration: CGFloat = 3.0) {
         let toastLabel = UILabel(
             frame: CGRect(
-                x: view.frame.size.width / 2 - 75,
-                y: view.frame.size.height - 100,
-                width: 150,
-                height: 30
+                x: view.frame.size.width / 2 - 200,
+                y: 100,
+                width: 400,
+                height: 50
             )
         )
-        //   toastLabel.backgroundColor = .appTint
-        //  toastLabel.textColor = .appWhite
-        toastLabel.font = .appCaption
+        toastLabel.backgroundColor = .green
+        toastLabel.textColor = .white
+        toastLabel.font = UIFont(name: "Nunito-Bold", size: 20)
         toastLabel.textAlignment = .center
         toastLabel.text = message
         toastLabel.alpha = 1

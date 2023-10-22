@@ -56,49 +56,76 @@ private extension DashboardView {
                         .font(.custom("Nunito-Regular", size: 15))
                         .foregroundColor(.gray)
 
-                    Text("5000$")
-                        .foregroundColor(.black)
-                        .font(.custom("Nunito-Bold", size: 40))
-                        .padding(.top, 3)
+                    HStack {
+                        Text("\(Int(store.state.invested / 100))€")
+                            .foregroundColor(.black)
+                            .font(.custom("Nunito-Bold", size: 40))
 
-                    Text("Investment: 4000$")
+                        Spacer()
+
+                        Text("+0%")
+                            .foregroundColor(.orange)
+                            .font(.custom("Nunito-Bold", size: 40))
+                    }
+                    .padding(.top, 3)
+
+                    Text("Investment: \(Int(store.state.invested / 100))€")
                         .font(.custom("Nunito-Regular", size: 12))
                         .foregroundColor(.gray)
 
-                    Text("Dividends: 1000$")
+                    Text("Dividends: 0€")
                         .font(.custom("Nunito-Regular", size: 12))
                         .foregroundColor(.gray)
 
-                    /* Text("Monthly dividend")
-                         .font(.custom("Nunito-Regular", size: 15))
-                         .foregroundColor(.gray)
-                         .padding(.top, 10)
+                    Button(action: {
+                        store.send(action: .didTapInvest)
+                    }, label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(.black)
 
-                     Text("5$")
-                         .foregroundColor(.black)
-                         .font(.custom("Nunito-Bold", size: 25))
-                         .padding(.top, 3) */
+                            Text("Invest 100€".uppercased())
+                                .foregroundColor(.white)
+                                .font(.custom("Nunito-Bold", size: 20))
+                                .padding(10)
+                        }
+                    })
+                    .padding(.top, 20)
 
-                    Text("Prediction")
+                    Text("Expected earnings")
                         .font(.custom("Nunito-Bold", size: 20))
                         .foregroundColor(.black)
-                        .padding(.top, 50)
+                        .padding(.top, 40)
 
                     LineView(
-                        data: [8, 9, 11, 13, 15, 18, 21, 25, 34],
+                        data: [store.state.invested / 100, (store.state.invested / 100) * 1.05, (store.state.invested / 100) * 1.05 * 1.05, (store.state.invested / 100) * 1.05 * 1.05 * 1.05, (store.state.invested / 100) * 1.05 * 1.05 * 1.05 * 1.05],
                         style: .init(
                             backgroundColor: .clear,
                             accentColor: .tint,
-                            gradientColor: .init(start: .tint, end: .yellow),
+                            gradientColor: .init(start: .tint, end: .green),
                             textColor: .black,
                             legendTextColor: .gray,
                             dropShadowColor: .white
                         )
                     )
                     .disabled(true)
+
+                    HStack {
+                        Text("now")
+                            .font(.custom("Nunito-Regular", size: 12))
+                            .foregroundColor(.gray)
+
+                        Spacer()
+
+                        Text("5 months")
+                            .font(.custom("Nunito-Regular", size: 12))
+                            .foregroundColor(.gray)
+                    }
+                    .padding([.leading, .trailing], 24)
+                    .offset(y: 280)
                 }
+                .padding([.leading, .trailing], 24)
             }
-            .padding([.leading, .trailing], 24)
         }
     }
 }

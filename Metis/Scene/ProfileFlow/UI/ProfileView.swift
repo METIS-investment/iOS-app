@@ -83,36 +83,57 @@ private extension ProfileView {
 
                         Spacer()
 
-                        Button(action: {}, label: {
-                            Text("Remove")
-                                .font(.custom("Nunito-Regular", size: 12))
-                                .foregroundColor(.gray)
-                        })
+                        if store.state.isBillable {
+                            Button(action: {
+                                store.send(action: .didTapRemoveCard)
+                            }, label: {
+                                Text("Remove")
+                                    .font(.custom("Nunito-Regular", size: 12))
+                                    .foregroundColor(.gray)
+                            })
+                        }
                     }
                     .padding(.top, 50)
 
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(LinearGradient(colors: [Color(R.color.tintColor.name), Color(R.color.tintColor.name), .yellow], startPoint: .topLeading, endPoint: .bottomTrailing))
-                        .opacity(0.5)
-                        .frame(height: 200)
-                        .padding(.top, 15)
-                        .overlay {
-                            VStack(spacing: 0) {
-                                HStack {
-                                    Text("VISA")
-                                        .font(.custom("Nunito-Bold", size: 18))
+                    if store.state.isBillable {
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(LinearGradient(colors: [Color(R.color.tintColor.name), Color(R.color.tintColor.name), .green], startPoint: .topLeading, endPoint: .bottomTrailing))
+                            .opacity(0.5)
+                            .frame(height: 200)
+                            .padding(.top, 15)
+                            .overlay {
+                                VStack(spacing: 0) {
+                                    HStack {
+                                        Text("VISA")
+                                            .font(.custom("Nunito-Bold", size: 18))
+                                            .foregroundColor(.black)
+
+                                        Spacer()
+                                    }
+                                    .padding(.bottom, 100)
+
+                                    Text("****  ****  ****  4790")
+                                        .font(.custom("Nunito-Bold", size: 20))
                                         .foregroundColor(.black)
-
-                                    Spacer()
                                 }
-                                .padding(.bottom, 100)
-
-                                Text("****  ****  ****  1234")
-                                    .font(.custom("Nunito-Bold", size: 20))
-                                    .foregroundColor(.black)
+                                .padding(.leading, 20)
                             }
-                            .padding(.leading, 20)
-                        }
+                    } else {
+                        Button(action: {
+                            store.send(action: .didTapAddCard)
+                        }, label: {
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 10)
+                                    .fill(.black)
+
+                                Text("Add card".uppercased())
+                                    .foregroundColor(.white)
+                                    .font(.custom("Nunito-Bold", size: 20))
+                                    .padding(10)
+                            }
+                        })
+                        .padding(.top, 10)
+                    }
 
                     Text("Transaction History")
                         .font(.custom("Nunito-Bold", size: 20))

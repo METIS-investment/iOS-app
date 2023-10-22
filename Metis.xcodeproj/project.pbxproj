@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA2F035A2AE4431A00B2D3D4 /* PaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2F03592AE4431A00B2D3D4 /* PaymentModel.swift */; };
 		CA37A8642AE29099008D0A4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37A8632AE29099008D0A4A /* AppDelegate.swift */; };
 		CA37A8662AE29099008D0A4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA37A8652AE29099008D0A4A /* SceneDelegate.swift */; };
 		CA37A86D2AE2909A008D0A4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA37A86C2AE2909A008D0A4A /* Assets.xcassets */; };
@@ -126,6 +127,15 @@
 		CA9EB1332AE3E84900E300D7 /* StoreRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EB1322AE3E84900E300D7 /* StoreRegistration.swift */; };
 		CA9EB1352AE3E84F00E300D7 /* ManagerRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EB1342AE3E84F00E300D7 /* ManagerRegistration.swift */; };
 		CA9EB1372AE3E85400E300D7 /* ServiceRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EB1362AE3E85400E300D7 /* ServiceRegistration.swift */; };
+		CA9EB13B2AE3EBF600E300D7 /* InvestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EB13A2AE3EBF600E300D7 /* InvestService.swift */; };
+		CA9EB13D2AE3EBFC00E300D7 /* InvestServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EB13C2AE3EBFC00E300D7 /* InvestServicing.swift */; };
+		CA9EB13F2AE3EC3F00E300D7 /* InvestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EB13E2AE3EC3F00E300D7 /* InvestRouter.swift */; };
+		CA9EB1412AE3EC7900E300D7 /* InvestValueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EB1402AE3EC7900E300D7 /* InvestValueModel.swift */; };
+		CA9EB1432AE3ECB900E300D7 /* RecurringInvestValueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EB1422AE3ECB900E300D7 /* RecurringInvestValueModel.swift */; };
+		CA9EB1472AE3FCC300E300D7 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EB1462AE3FCC300E300D7 /* UserService.swift */; };
+		CA9EB1492AE3FCC900E300D7 /* UserServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EB1482AE3FCC900E300D7 /* UserServicing.swift */; };
+		CA9EB14B2AE3FCD100E300D7 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EB14A2AE3FCD100E300D7 /* UserRouter.swift */; };
+		CA9EB14D2AE3FCFD00E300D7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EB14C2AE3FCFD00E300D7 /* User.swift */; };
 		E12D44B45D13500945E194CF /* Pods_defaults_Metis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A8B312CE9A34E1D68F53AB /* Pods_defaults_Metis.framework */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +143,7 @@
 		43A8B312CE9A34E1D68F53AB /* Pods_defaults_Metis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_defaults_Metis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF301BBE3F8D887F512323C /* Pods-defaults-Metis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-defaults-Metis.release.xcconfig"; path = "Target Support Files/Pods-defaults-Metis/Pods-defaults-Metis.release.xcconfig"; sourceTree = "<group>"; };
 		C3788AA75042DB866C7E1FA3 /* Pods-defaults-Metis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-defaults-Metis.debug.xcconfig"; path = "Target Support Files/Pods-defaults-Metis/Pods-defaults-Metis.debug.xcconfig"; sourceTree = "<group>"; };
+		CA2F03592AE4431A00B2D3D4 /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
 		CA37A8602AE29099008D0A4A /* Metis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA37A8632AE29099008D0A4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA37A8652AE29099008D0A4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -220,6 +231,15 @@
 		CA9EB1322AE3E84900E300D7 /* StoreRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreRegistration.swift; sourceTree = "<group>"; };
 		CA9EB1342AE3E84F00E300D7 /* ManagerRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerRegistration.swift; sourceTree = "<group>"; };
 		CA9EB1362AE3E85400E300D7 /* ServiceRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRegistration.swift; sourceTree = "<group>"; };
+		CA9EB13A2AE3EBF600E300D7 /* InvestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestService.swift; sourceTree = "<group>"; };
+		CA9EB13C2AE3EBFC00E300D7 /* InvestServicing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestServicing.swift; sourceTree = "<group>"; };
+		CA9EB13E2AE3EC3F00E300D7 /* InvestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestRouter.swift; sourceTree = "<group>"; };
+		CA9EB1402AE3EC7900E300D7 /* InvestValueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestValueModel.swift; sourceTree = "<group>"; };
+		CA9EB1422AE3ECB900E300D7 /* RecurringInvestValueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurringInvestValueModel.swift; sourceTree = "<group>"; };
+		CA9EB1462AE3FCC300E300D7 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		CA9EB1482AE3FCC900E300D7 /* UserServicing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServicing.swift; sourceTree = "<group>"; };
+		CA9EB14A2AE3FCD100E300D7 /* UserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
+		CA9EB14C2AE3FCFD00E300D7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,7 +349,6 @@
 				CA9EB1232AE3E7D500E300D7 /* Coordinators */,
 				CA37A8AB2AE29A2A008D0A4A /* Configurations */,
 				CA37A8832AE29A29008D0A4A /* Extensions */,
-				CA37A88E2AE29A29008D0A4A /* Managers */,
 				CA37A8C32AE29A2A008D0A4A /* Protocols */,
 				CA37A89A2AE29A29008D0A4A /* Services */,
 				CA37A8A32AE29A2A008D0A4A /* Types */,
@@ -394,16 +413,11 @@
 			path = SwiftUI;
 			sourceTree = "<group>";
 		};
-		CA37A88E2AE29A29008D0A4A /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
 		CA37A89A2AE29A29008D0A4A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CA9EB1452AE3FCBA00E300D7 /* User */,
+				CA9EB1442AE3FCB100E300D7 /* Invest */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -761,6 +775,10 @@
 		CA9EB1382AE3E88000E300D7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CA9EB1402AE3EC7900E300D7 /* InvestValueModel.swift */,
+				CA9EB1422AE3ECB900E300D7 /* RecurringInvestValueModel.swift */,
+				CA9EB14C2AE3FCFD00E300D7 /* User.swift */,
+				CA2F03592AE4431A00B2D3D4 /* PaymentModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -770,6 +788,26 @@
 			children = (
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		CA9EB1442AE3FCB100E300D7 /* Invest */ = {
+			isa = PBXGroup;
+			children = (
+				CA9EB13A2AE3EBF600E300D7 /* InvestService.swift */,
+				CA9EB13C2AE3EBFC00E300D7 /* InvestServicing.swift */,
+				CA9EB13E2AE3EC3F00E300D7 /* InvestRouter.swift */,
+			);
+			path = Invest;
+			sourceTree = "<group>";
+		};
+		CA9EB1452AE3FCBA00E300D7 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				CA9EB1462AE3FCC300E300D7 /* UserService.swift */,
+				CA9EB1482AE3FCC900E300D7 /* UserServicing.swift */,
+				CA9EB14A2AE3FCD100E300D7 /* UserRouter.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		E93355D58DF84B2AC796322A /* Frameworks */ = {
@@ -1014,6 +1052,7 @@
 				CA7E50F72AE2C00400D4BD71 /* ProfileState.swift in Sources */,
 				CA37A9192AE29C71008D0A4A /* DashboardState.swift in Sources */,
 				CA7E50942AE2B18300D4BD71 /* SignInViewEvent.swift in Sources */,
+				CA9EB1412AE3EC7900E300D7 /* InvestValueModel.swift in Sources */,
 				CA7E50872AE2B10700D4BD71 /* SignInCoordinator.swift in Sources */,
 				CA37A8D82AE29A2A008D0A4A /* View+OnFirstAppear.swift in Sources */,
 				CA37A8EC2AE29A2A008D0A4A /* SceneManifest.swift in Sources */,
@@ -1033,9 +1072,12 @@
 				CA37A8D72AE29A2A008D0A4A /* Font+AppFonts.swift in Sources */,
 				CA37A9172AE29C57008D0A4A /* DashboardAction.swift in Sources */,
 				CA37A8EF2AE29A2A008D0A4A /* Configuration.swift in Sources */,
+				CA2F035A2AE4431A00B2D3D4 /* PaymentModel.swift in Sources */,
 				CA37A8E62AE29A2A008D0A4A /* ActiveScene.swift in Sources */,
 				CA7E50FD2AE2C05900D4BD71 /* ProfileViewData.swift in Sources */,
 				CA9EB1302AE3E81200E300D7 /* InitialSceneCoordinator.swift in Sources */,
+				CA9EB13B2AE3EBF600E300D7 /* InvestService.swift in Sources */,
+				CA9EB13D2AE3EBFC00E300D7 /* InvestServicing.swift in Sources */,
 				CA7E50892AE2B13D00D4BD71 /* SignInCoordinatorEvent.swift in Sources */,
 				CA37A8D22AE29A2A008D0A4A /* UIViewController+Toast.swift in Sources */,
 				CA7E50E92AE2BF6500D4BD71 /* ProfileView.swift in Sources */,
@@ -1048,6 +1090,8 @@
 				CA37A93F2AE2A2C3008D0A4A /* DashboardCoordinatorEvent.swift in Sources */,
 				CA9EB1352AE3E84F00E300D7 /* ManagerRegistration.swift in Sources */,
 				CA37A9022AE29A2A008D0A4A /* Coordinator.swift in Sources */,
+				CA9EB1432AE3ECB900E300D7 /* RecurringInvestValueModel.swift in Sources */,
+				CA9EB1492AE3FCC900E300D7 /* UserServicing.swift in Sources */,
 				CA37A8E72AE29A2A008D0A4A /* LocalizedString.swift in Sources */,
 				CA37A9012AE29A2A008D0A4A /* AppCoordinatorContaining.swift in Sources */,
 				CA37A9202AE29D14008D0A4A /* DashboardViewEvent.swift in Sources */,
@@ -1058,6 +1102,8 @@
 				CA7E50DF2AE2BE4400D4BD71 /* ProfileCoordinator.swift in Sources */,
 				CA37A9382AE2A1B8008D0A4A /* MainTabBarViewController.swift in Sources */,
 				CA7E50F12AE2BFDF00D4BD71 /* StoriesState.swift in Sources */,
+				CA9EB13F2AE3EC3F00E300D7 /* InvestRouter.swift in Sources */,
+				CA9EB14D2AE3FCFD00E300D7 /* User.swift in Sources */,
 				CA7E50EF2AE2BFD900D4BD71 /* StoriesAction.swift in Sources */,
 				CA7E50902AE2B16B00D4BD71 /* SignInAction.swift in Sources */,
 				CA37A91B2AE29C97008D0A4A /* DashboardStore.swift in Sources */,
@@ -1067,6 +1113,7 @@
 				CA37A8D42AE29A2A008D0A4A /* UISceneDelegate+AppCoordinator.swift in Sources */,
 				CA7E508E2AE2B16400D4BD71 /* SignInState.swift in Sources */,
 				CA37A93A2AE2A217008D0A4A /* TabBarControllerCoordinator.swift in Sources */,
+				CA9EB14B2AE3FCD100E300D7 /* UserRouter.swift in Sources */,
 				CA7E509E2AE2B59F00D4BD71 /* ReactiveViewController.swift in Sources */,
 				CA37A8662AE29099008D0A4A /* SceneDelegate.swift in Sources */,
 				CA7E50F92AE2C00A00D4BD71 /* ProfileStore.swift in Sources */,
@@ -1081,6 +1128,7 @@
 				CA37A9032AE29A2A008D0A4A /* StoreState.swift in Sources */,
 				CA9EB1332AE3E84900E300D7 /* StoreRegistration.swift in Sources */,
 				CA37A9372AE2A1B8008D0A4A /* MainTabBarViewEvent.swift in Sources */,
+				CA9EB1472AE3FCC300E300D7 /* UserService.swift in Sources */,
 				CA37A9052AE29A2A008D0A4A /* StoreContaining.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1234,6 +1282,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = THNASY6U4C;
@@ -1257,9 +1306,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.metis-investment.app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1269,6 +1322,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = THNASY6U4C;
@@ -1292,9 +1346,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.metis-investment.app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
